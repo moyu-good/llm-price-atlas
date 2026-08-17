@@ -1,11 +1,11 @@
 # AI 模型价格库 · AI API Pricing Database
 
-> **全网 AI 模型 / API / 套餐价格数据库** — 覆盖 84 平台、571 模型、1,266 条按量价、164 条订阅套餐，全部带采集时间戳与价格生效时间戳。
+> **全网 AI 模型 / API / 套餐价格数据库** — 覆盖 92 平台、581 模型、1,278 条按量价、178 条订阅套餐，全部带采集时间戳与价格生效时间戳。
 
-![Platforms](https://img.shields.io/badge/平台-84-blue)
-![Models](https://img.shields.io/badge/模型-571-green)
-![Pricing](https://img.shields.io/badge/按量价-1,266-orange)
-![Plans](https://img.shields.io/badge/套餐-164-purple)
+![Platforms](https://img.shields.io/badge/平台-92-blue)
+![Models](https://img.shields.io/badge/模型-581-green)
+![Pricing](https://img.shields.io/badge/按量价-1,278-orange)
+![Plans](https://img.shields.io/badge/套餐-178-purple)
 ![Updated](https://img.shields.io/badge/更新-2026--08--17-brightgreen)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
 
@@ -18,102 +18,103 @@
 
 ## ⚡ 快速对比
 
-### DeepSeek V4 Flash — 全网渠道价对比（$ / 百万 token）
+### DeepSeek V4 Flash — 全网渠道价对比（双币，$ / ¥ 每百万 token）
 
-> ⚠️ DeepSeek 官方 2026-08-17 起峰谷定价：输出高峰 ¥9 / 闲时 ¥4.5。高峰时段 = 每日 9-12、14-18 点。
+> ⚠️ DeepSeek 官方 2026-08-17 起峰谷定价：输出高峰 ¥9 / 闲时 ¥4.5。高峰时段 = 每日 9-12、14-18 点。汇率 fx=7.1（2026-08 参考）。
 
 | 渠道 | 输入 | 输出 | 缓存命中 | 备注 |
 |---|---|---|---|---|
-| **OpenRouter** | $0.0603 | $0.1206 | $0.015719 | ≈0.43元/M |
-| **DeepInfra** | $0.09 | $0.18 | $0.002 | API直拉：cents_per_input_token=9e-06 |
-| **Cloudflare** | $0.027 | $0.1 | — | 范围$0.027-4.88/M，Neurons计费，免费日额度 |
-| **Fireworks** | $0.14 | $0.28 | — | 新用户$6+1亿token |
-| **Parasail** | $0.14 | $0.28 | — |  |
-| **Cerebras** | $0.14 | $0.28 | — |  |
-| **Novita** | $0.14 | $0.28 | — |  |
-| **SambaNova** | $0.26 | $0.52 | — | 最低gpt-oss-120b $0.26起 |
-| **Together** | $0.27 | $0.54 | — | V4 1M ctx，自托管盈亏平衡~75M/月 |
-| **Groq** | $0.3 | $0.5 | — | 缓存命中$0.03 |
-| **阿里百炼** | ¥1 | ¥2 | — | 8/17前，峰谷后待确认 |
-| **DeepSeek官方** | — | ¥9 | — | 峰谷：高峰9/闲时4.5；批量5折 |
-| **硅基流动** | ¥2 | — | — | DeepSeek 3.2时代对比 |
+| **OpenRouter** | $0.0603 / ¥0.4281 | $0.1206 / ¥0.8563 | $0.015719 | ≈0.43元/M |
+| **DeepInfra** | $0.09 / ¥0.639 | $0.18 / ¥1.278 | $0.002 | API直拉：cents_per_input_token=9e-06 |
+| **Cloudflare** | $0.027 / ¥0.1917 | $0.1 / ¥0.71 | — | 范围$0.027-4.88/M，Neurons计费，免费日额度 |
+| **Fireworks** | $0.14 / ¥0.994 | $0.28 / ¥1.988 | — | 新用户$6+1亿token |
+| **Parasail** | $0.14 / ¥0.994 | $0.28 / ¥1.988 | — |  |
+| **Cerebras** | $0.14 / ¥0.994 | $0.28 / ¥1.988 | — |  |
+| **Novita** | $0.14 / ¥0.994 | $0.28 / ¥1.988 | — |  |
+| **SambaNova** | $0.26 / ¥1.846 | $0.52 / ¥3.692 | — | 最低gpt-oss-120b $0.26起 |
+| **Together** | $0.27 / ¥1.917 | $0.54 / ¥3.834 | — | V4 1M ctx，自托管盈亏平衡~75M/月 |
+| **Groq** | $0.3 / ¥2.13 | $0.5 / ¥3.55 | — | 缓存命中$0.03 |
+| **阿里百炼** | $0.140845 / ¥1 | $0.28169 / ¥2 | — | 8/17前，峰谷后待确认 |
+| **DeepSeek官方** | — | $1.26761 / ¥9 | $0.014085 | 峰谷：高峰9/闲时4.5；批量5折 |
+| **硅基流动** | $0.28169 / ¥2 | — | — | DeepSeek 3.2时代对比 |
 
 ### 主流旗舰模型官方 API 价
 
 | 模型 | 输入 | 输出 | 上下文 | 来源 |
 |---|---|---|---|---|
-| **gpt-5.6-sol** | $5 | $30 | ~1M | OpenAI |
-| **gpt-5.5** | $5 | $30 | 1.05M ctx | OpenAI |
-| **gpt-5.2** | $0.03 | $0.05 | — | OpenAI |
+| **gpt-5.6-sol** | $5 / ¥35.5 | $30 / ¥213 | ~1M | OpenAI |
+| **gpt-5.5** | $5 / ¥35.5 | $30 / ¥213 | 1.05M ctx | OpenAI |
+| **gpt-5.2** | $0.03 / ¥0.213 | $0.05 / ¥0.355 | — | OpenAI |
 | **claude-fable-5** | $10 | $50 | OR路由 | Anthropic |
 | **claude-opus-5** | $10 | $50 | OR路由 | Anthropic |
-| **claude-opus-4.7** | $5 | $25 | 200k | Anthropic |
-| **claude-sonnet-4.6** | $3 | $15 | 200k | Anthropic |
-| **claude-haiku-4.5** | $1 | $5 | 200k | Anthropic |
-| **gemini-3.6-flash** | $1.5 | $7.5 | — | Google |
-| **gemini-3.1-pro** | $2 | $12 | — | Google |
-| **gemini-3.5-flash-lite** | $0.3 | $2.5 | — | Google |
+| **claude-opus-4.7** | $5 / ¥35.5 | $25 / ¥177.5 | 200k | Anthropic |
+| **claude-sonnet-4.6** | $3 / ¥21.3 | $15 / ¥106.5 | 200k | Anthropic |
+| **claude-haiku-4.5** | $1 / ¥7.1 | $5 / ¥35.5 | 200k | Anthropic |
+| **gemini-3.6-flash** | $1.5 / ¥10.65 | $7.5 / ¥53.25 | — | Google |
+| **gemini-3.1-pro** | $2 / ¥14.2 | $12 / ¥85.2 | — | Google |
+| **gemini-3.5-flash-lite** | $0.3 / ¥2.13 | $2.5 / ¥17.75 | — | Google |
 | **grok-4.6** | $2 | $6 | OR路由 | xAI |
-| **grok-4.3** | $1.25 | $2.5 | 2M ctx | xAI |
-| **grok-4.1-fast** | $0.2 | $0.4 | — | xAI |
-| **deepseek-v4-pro** | — | ¥27 | — | DeepSeek官方 |
-| **deepseek-v4-flash** | — | ¥9 | — | DeepSeek官方 |
-| **qwen3.7-max** | ¥6.6 | ¥36 | — | 阿里百炼 |
-| **qwen3.7-plus** | ¥2 | ¥8 | — | 阿里百炼 |
-| **minimax-m3** | $0.24 | $0.96 | 1M | MiniMax |
-| **minimax-m2.7** | $0.06 | — | 1M ctx | MiniMax |
-| **kimi-k3** | — | $15 | 1M ctx | 月之暗面 |
-| **glm-5** | $0.95 | $2.5 | — | 智谱 |
-| **mistral-large-3** | $0.5 | $1.5 | — | Mistral |
-| **open-mistral-nemo** | $0.02 | $0.04 | — | Mistral |
+| **grok-4.3** | $1.25 / ¥8.875 | $2.5 / ¥17.75 | 2M ctx | xAI |
+| **grok-4.1-fast** | $0.2 / ¥1.42 | $0.4 / ¥2.84 | — | xAI |
+| **deepseek-v4-pro** | — | $3.80282 / ¥27 | — | DeepSeek官方 |
+| **deepseek-v4-flash** | — | $1.26761 / ¥9 | — | DeepSeek官方 |
+| **qwen3.7-max** | $0.929577 / ¥6.6 | $5.07042 / ¥36 | — | 阿里百炼 |
+| **qwen3.7-plus** | $0.28169 / ¥2 | $1.12676 / ¥8 | — | 阿里百炼 |
+| **minimax-m3** | $0.24 / ¥1.704 | $0.96 / ¥6.816 | 1M | MiniMax |
+| **minimax-m2.7** | $0.06 / ¥0.426 | — | 1M ctx | MiniMax |
+| **kimi-k3** | — | $15 / ¥100 | 1M ctx | 月之暗面 |
+| **glm-5** | $0.95 / ¥6.745 | $2.5 / ¥17.75 | — | 智谱 |
+| **mistral-large-3** | $0.5 / ¥3.55 | $1.5 / ¥10.65 | — | Mistral |
+| **open-mistral-nemo** | $0.02 / ¥0.142 | $0.04 / ¥0.284 | — | Mistral |
 
 > `OR路由` = OpenRouter 路由价；`—` = 该平台无此口径价，详见 data/pricing.csv。
 
 ### 订阅套餐快查（¥ / 月）
 
-| 产品 | 套餐 | 价格 | 额度/说明 |
-|---|---|---|---|
-| HuggingFace | 免费用户月额度 | ¥0.1 | $0.10/月 |
-| HuggingFace | PRO用户月额度 | ¥2 | $2/月 |
-| Trae | Lite | ¥3 |  |
-| OpenAI | ChatGPT Plus·印度 | ¥4.8 | ₹399约$4.8 |
-| Poe | 订阅起步 | ¥4.99 | 积分制，最高830万积分/月 |
-| ElevenLabs | Starter | ¥5 | 年付$5/月 |
-| Kling | 低价入门 | ¥6.99 | $6.99/月起 |
-| OpenAI | ChatGPT Go | ¥8 | 基础额度 |
-| Sourcegraph | Cody Pro | ¥9 | ~$9/user/mo |
-| Coze | Premium(国际版) | ¥9 | 每天100条信息信用点 |
-| 美团LongCat | 2.0-Preview 付费包 | ¥9.9 | 5000万tokens |
-| GitHub Copilot | Pro | ¥10 | AI Credits按token |
-| Midjourney | Basic | ¥10 | Fast小时 |
-| Suno | Pro | ¥10 | Basic/Premier |
-| Trae | Pro | ¥10 |  |
-| CodeBuddy | 基础套餐 | ¥10 | 1000 credits |
-| Kling | Standard | ¥10 | 最小月度credit池 |
-| GitHub Copilot | Pro·按token | ¥10 | AI Credits按模型扣 |
-| Runway | Standard | ¥12 | credits |
-| Windsurf | Pro | ¥15 | 500提示/月，可+$10/250提示 |
-| OpenAI | ChatGPT Plus·菲律宾区 | ¥16.31 | 玻区涨后唯一低价区 ₱999；无税 |
-| GitHub Copilot | Business | ¥19 | 按token |
-| Sourcegraph | Cody Enterprise | ¥19 | $19/user/mo |
-| AmazonQ | Q Developer Pro | ¥19 | 超4000行转换+$0.003/行 |
-| GoogleOne | AI Pro | ¥19.99 | 2TB存储+Gemini 3 Pro+Veo2 |
-| Anthropic | Claude Pro | ¥20 | 标准用量 |
-| Anthropic | Claude Enterprise | ¥20 | 每人+API用量计费 |
-| OpenAI | ChatGPT Plus | ¥20 | 标准额度 |
-| Cursor | Pro | ¥20 | $20 credits |
-| Replit | Core | ¥20 | 教育邮箱$10 |
+| 产品 | 套餐 | 价格 | 币种 | 额度/说明 |
+|---|---|---|---|---|
+| HuggingFace | 免费用户月额度 | $0.1 / ¥0.71 | USD | $0.10/月 |
+| Trae | Lite | ¥3 / $0.422535 | CNY |  |
+| 美团LongCat | 2.0-Preview 付费包 | ¥9.9 / $1.39437 | CNY | 5000万tokens |
+| Trae | Pro | ¥10 / $1.40845 | CNY |  |
+| CodeBuddy | 基础套餐 | ¥10 / $1.40845 | CNY | 1000 credits |
+| HuggingFace | PRO用户月额度 | $2 / ¥14.2 | USD | $2/月 |
+| 通义灵码 | 专业版 | ¥20 / $2.8169 | CNY | 估算 |
+| MarsCode | Pro·国际版 | ¥20 / $2.8169 | CNY | ACU按量，每ACU $2.25 |
+| MiniMax | Coding Plan Starter | ¥29 / $4.08451 | CNY |  |
+| Trae | Pro+ | ¥30 / $4.22535 | CNY |  |
+| OpenAI | ChatGPT Plus·印度 | $4.8 / ¥34.08 | USD | ₹399约$4.8 |
+| Poe | 订阅起步 | $4.99014 / ¥35.43 | USD | 积分制，最高830万积分/月 |
+| ElevenLabs | Starter | $5 / ¥35.5 | USD | 年付$5/月 |
+| 火山套餐 | Agent Plan Small | ¥40 / $5.6338 | CNY | 限时9.9元起活动 |
+| 火山套餐 | Coding Plan 入门 | ¥40 / $5.6338 | CNY | 活动折上9折低至8.9元 |
+| 火山套餐 | Coding Plan Lite | ¥40 / $5.6338 | CNY | 18000次/月 |
+| MiniMax | Token Plan Plus | ¥49 / $6.90141 | CNY | 官方文档确认¥49/月 |
+| Kling | 低价入门 | $6.99014 / ¥49.63 | USD | $6.99/月起 |
+| Vertex AI | Gemini Workspace Starter | $7 / ¥49.7 | USD | Google Workspace 集成 |
+| Google | Gemini Workspace Starter | $7 / ¥49.7 | USD |  |
+| OpenAI | ChatGPT Go | $8 / ¥56.8 | USD | 基础额度 |
+| Sourcegraph | Cody Pro | $9 / ¥63.9 | USD | ~$9/user/mo |
+| Coze | Premium(国际版) | $9 / ¥63.9 | USD | 每天100条信息信用点 |
+| 字节豆包 | 豆包专业版(C端) | ¥68 / $9.57746 | CNY | 2026-06-24上线 |
+| Adobe Firefly | Standard | $9.99014 / ¥70.93 | USD | credits |
+| GitHub Copilot | Pro | $10 / ¥71 | USD | AI Credits按token |
+| Midjourney | Basic | $10 / ¥71 | USD | Fast小时 |
+| Suno | Pro | $10 / ¥71 | USD | Basic/Premier |
+| Kling | Standard | $10 / ¥71 | USD | 最小月度credit池 |
+| GitHub Copilot | Pro·按token | $10 / ¥71 | USD | AI Credits按模型扣 |
 
 ## 📊 数据规模
 
 | 维度 | 数量 |
 |---|---|
-| 平台 | 84（无一空壳） |
-| 模型 | 571（含 OpenRouter 全目录 414） |
-| 按量价 | 1,266 条 |
-| 订阅套餐 | 164 条 |
+| 平台 | 92（无一空壳） |
+| 模型 | 581（含 OpenRouter 全目录 414） |
+| 按量价 | 1,278 条 |
+| 订阅套餐 | 178 条 |
 | 区域标注 | 16 条（国内外/区域差异） |
 | 时间戳覆盖 | 100%（collected_at + effective_at） |
+| 币种 | 统一双币（USD/CNY，fx=7.1 标注在 pricing.fx_rate） |
 
 ## 🗂️ 覆盖范围
 
