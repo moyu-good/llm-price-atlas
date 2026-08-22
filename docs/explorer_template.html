@@ -1,191 +1,327 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>AI 模型价格库 · Explorer</title>
+<title>LLM Price Atlas — AI Model & Subscription Prices</title>
+<meta name="description" content="Verified pricing database: 92 AI providers, 581 models, 1,323 API prices and 194 subscription plans. Dual-timestamp provenance, offline single-file explorer.">
+<meta property="og:title" content="LLM Price Atlas">
+<meta property="og:description" content="92 AI providers · 581 models · 1,323 verified prices · 194 plans — compare and explore offline.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%97%84%EF%B8%8F%3C/text%3E%3C/svg%3E">
 <style>
-:root{--bg:#0d1117;--bg2:#161b22;--bd:#30363d;--fg:#e6edf3;--dim:#8b949e;--acc:#58a6ff;--grn:#3fb950;--org:#d29922;--red:#f85149}
+:root{--bg:#0d1117;--bg2:#161b22;--bd:#30363d;--fg:#e6edf3;--dim:#8b949e;--acc:#58a6ff;--grn:#3fb950;--org:#d29922}
 *{box-sizing:border-box;margin:0;padding:0}
-body{background:var(--bg);color:var(--fg);font:14px/1.5 -apple-system,"Segoe UI",Roboto,"PingFang SC","Microsoft YaHei",sans-serif;padding-bottom:60px}
-header{position:sticky;top:0;z-index:10;background:rgba(13,17,23,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--bd);padding:14px 20px 0}
-h1{font-size:20px;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+body{background:var(--bg);color:var(--fg);font:14px/1.55 -apple-system,"Segoe UI",Roboto,"PingFang SC","Microsoft YaHei",sans-serif;padding-bottom:50px}
+header{position:sticky;top:0;z-index:10;background:rgba(13,17,23,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--bd);padding:12px 20px 0}
+.hrow{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+h1{font-size:19px;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
 h1 .sub{color:var(--dim);font-size:12px;font-weight:400}
-.badges{display:flex;gap:8px;margin-top:8px;flex-wrap:wrap}
-.badge{background:var(--bg2);border:1px solid var(--bd);border-radius:20px;padding:2px 12px;font-size:12px;color:var(--dim)}
+#lang{background:var(--bg2);border:1px solid var(--bd);border-radius:6px;color:var(--fg);padding:4px 12px;font-size:12px;cursor:pointer}
+#lang b{color:var(--acc)}
+.badges{display:flex;gap:8px;margin-top:6px;flex-wrap:wrap}
+.badge{background:var(--bg2);border:1px solid var(--bd);border-radius:20px;padding:1px 11px;font-size:12px;color:var(--dim)}
 .badge b{color:var(--acc)}
-.tabs{display:flex;gap:4px;margin-top:12px}
-.tab{padding:8px 18px;border:1px solid var(--bd);border-bottom:none;border-radius:8px 8px 0 0;cursor:pointer;color:var(--dim);background:transparent;font-size:14px}
+.tabs{display:flex;gap:4px;margin-top:10px;overflow-x:auto}
+.tab{padding:8px 16px;border:1px solid var(--bd);border-bottom:none;border-radius:8px 8px 0 0;cursor:pointer;color:var(--dim);background:transparent;font-size:13px;white-space:nowrap}
 .tab.on{color:var(--fg);background:var(--bg2);font-weight:600}
-main{max-width:1280px;margin:0 auto;padding:16px 20px}
-.bar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+main{max-width:1280px;margin:0 auto;padding:16px 16px}
+.bar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px;align-items:center}
 input,select{background:var(--bg2);border:1px solid var(--bd);border-radius:6px;color:var(--fg);padding:7px 10px;font-size:13px}
-input[type=search]{flex:1;min-width:200px}
+input[type=search]{flex:1;min-width:180px}
 input:focus,select:focus{outline:1px solid var(--acc)}
-table{width:100%;border-collapse:collapse;font-size:13px;background:var(--bg2);border-radius:8px;overflow:hidden}
-th{background:#1c2128;text-align:left;padding:9px 10px;color:var(--dim);cursor:pointer;user-select:none;white-space:nowrap;position:sticky;top:118px}
+.count{font-size:12px;color:var(--dim);white-space:nowrap}
+.twrap{overflow-x:auto;border-radius:8px;border:1px solid var(--bd)}
+table{width:100%;border-collapse:collapse;font-size:13px;background:var(--bg2)}
+th{background:#1c2128;text-align:left;padding:9px 10px;color:var(--dim);cursor:pointer;user-select:none;white-space:nowrap}
 th:hover{color:var(--acc)}
-td{padding:8px 10px;border-top:1px solid var(--bd)}
+td{padding:8px 10px;border-top:1px solid #21262d}
 tr:hover td{background:#1a2029}
+tr.det>td{background:#11161d;cursor:default}
 .num{text-align:right;font-variant-numeric:tabular-nums}
-.pill{display:inline-block;border-radius:10px;padding:0 8px;font-size:11px;line-height:18px}
+.pill{display:inline-block;border-radius:10px;padding:0 8px;font-size:11px;line-height:18px;white-space:nowrap}
 .pill.in{background:#12351f;color:var(--grn)}.pill.out{background:#3a2210;color:var(--org)}
 .pill.mix{background:#12283f;color:var(--acc)}.pill.other{background:#2d333b;color:var(--dim)}
-.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:12px}
+.chip{display:inline-block;background:#12283f;color:var(--acc);border-radius:10px;padding:0 8px;font-size:11px;line-height:18px;cursor:pointer;white-space:nowrap}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:12px}
 .card{background:var(--bg2);border:1px solid var(--bd);border-radius:10px;padding:14px}
-.card h3{font-size:15px;margin-bottom:6px;display:flex;justify-content:space-between;align-items:center}
-.card .kv{font-size:12px;color:var(--dim);margin:3px 0;word-break:break-all}
-.card a{color:var(--acc);text-decoration:none}
-.tag{display:inline-block;background:#1c2128;border:1px solid var(--bd);border-radius:4px;padding:0 6px;font-size:11px;color:var(--acc);margin:2px 2px 0 0;cursor:pointer}
-.grp{margin-bottom:14px}
-.grp>.head{background:var(--bg2);border:1px solid var(--bd);border-radius:8px;padding:10px 14px;cursor:pointer;display:flex;justify-content:space-between;align-items:center}
+.card h3{font-size:15px;margin-bottom:6px;display:flex;justify-content:space-between;gap:6px}
+.kv{font-size:12px;color:var(--dim);margin:3px 0;word-break:break-all}
+a{color:var(--acc);text-decoration:none}
+.copy{background:var(--bd);color:var(--fg);border:none;border-radius:4px;padding:2px 8px;font-size:11px;cursor:pointer;margin-left:6px}
+.grp{margin-bottom:10px}
+.grp>.head{background:var(--bg2);border:1px solid var(--bd);border-radius:8px;padding:10px 14px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:8px}
 .grp>.head b{font-size:14px}
 .grp>.head span{color:var(--dim);font-size:12px}
-.grp>.body{display:none;border:1px solid var(--bd);border-top:none;border-radius:0 0 8px 8px;padding:6px 14px}
+.grp>.body{display:none;border:1px solid var(--bd);border-top:none;border-radius:0 0 8px 8px;padding:4px 14px}
 .grp.open>.body{display:block}
-.plan-row{display:grid;grid-template-columns:180px 90px 1fr;gap:10px;padding:8px 0;border-top:1px solid #21262d;font-size:13px;align-items:baseline}
+.plan-row{display:grid;grid-template-columns:minmax(150px,180px) minmax(80px,90px) 1fr;gap:10px;padding:8px 0;border-top:1px solid #21262d;font-size:13px;align-items:baseline}
 .plan-row:first-child{border-top:none}
 .price{color:var(--grn);font-weight:600;text-align:right;white-space:nowrap}
-.quota{color:var(--dim);font-size:12px}
-.models{grid-column:1/4;font-size:11px;color:var(--acc);word-break:break-all}
+.quota{color:var(--dim);font-size:12px;word-break:break-word}
+.models{grid-column:1/4;font-size:11px;color:var(--acc);word-break:break-word}
 .empty{color:var(--dim);text-align:center;padding:40px}
-.copy{background:var(--bd);color:var(--fg);border:none;border-radius:4px;padding:2px 8px;font-size:11px;cursor:pointer;margin-left:6px}
-footer{text-align:center;color:var(--dim);font-size:12px;padding:30px 0 10px}
+.pager{display:flex;gap:8px;align-items:center;justify-content:flex-end;margin-top:10px;font-size:13px;color:var(--dim)}
+.pager button{background:var(--bg2);border:1px solid var(--bd);border-radius:6px;color:var(--fg);padding:4px 12px;cursor:pointer}
+.pager button:disabled{opacity:.35;cursor:default}
+footer{text-align:center;color:var(--dim);font-size:12px;padding:28px 12px}
+@media(max-width:720px){.plan-row{grid-template-columns:1fr}.price{text-align:left}}
 </style>
 </head>
 <body>
 <header>
-  <h1>🗄️ AI 模型价格库 <span class="sub" id="meta"></span></h1>
+  <div class="hrow">
+    <h1>🗄️ <span data-i18n="title"></span> <span class="sub" id="meta"></span></h1>
+    <button id="lang"></button>
+  </div>
   <div class="badges" id="badges"></div>
-  <div class="tabs">
-    <button class="tab on" data-t="pricing">💰 模型 API 价格</button>
-    <button class="tab" data-t="plans">📦 订阅套餐</button>
-    <button class="tab" data-t="api">🔌 API 接入</button>
+  <div class="tabs" id="tabs">
+    <button class="tab" data-t="compare"></button>
+    <button class="tab" data-t="prices"></button>
+    <button class="tab" data-t="plans"></button>
+    <button class="tab" data-t="api"></button>
   </div>
 </header>
 <main>
-  <!-- 价格 -->
-  <section id="v-pricing">
-    <div class="bar">
-      <input type="search" id="q-p" placeholder="搜索模型名… 如 deepseek / gemini / gpt">
-      <select id="f-plat"><option value="">全部平台</option></select>
-      <select id="f-type"><option value="">全部类型</option></select>
-      <span class="badge" id="cnt-p"></span>
-    </div>
-    <table><thead><tr>
-      <th data-s="platform">平台 ▾</th><th data-s="model_name">模型 ▾</th>
-      <th data-s="item_type">类型 ▾</th><th class="num" data-s="price_usd">$ /Mtok ▾</th>
-      <th class="num" data-s="price_cny">¥ /Mtok ▾</th><th class="num">峰谷价(¥)</th>
-    </tr></thead><tbody id="tb-p"></tbody></table>
-    <div class="empty" id="no-p" style="display:none">无匹配结果</div>
-  </section>
+<section id="v-compare">
+  <div class="bar">
+    <input type="search" id="q-c"><select id="f-cp"><option value=""></option></select>
+    <span class="count" id="cnt-c"></span>
+  </div>
+  <div class="twrap"><table><thead><tr>
+    <th data-s="model"></th><th data-s="ch"></th>
+    <th class="num" data-s="in$"></th><th class="num" data-s="out$"></th>
+    <th class="num" data-s="total"></th><th></th>
+  </tr></thead><tbody id="tb-c"></tbody></table></div>
+  <div class="empty" id="no-c" hidden></div>
+</section>
 
-  <!-- 套餐 -->
-  <section id="v-plans" style="display:none">
-    <div class="bar"><input type="search" id="q-pl" placeholder="搜索套餐/额度/包含模型…"><span class="badge" id="cnt-pl"></span></div>
-    <div id="plan-groups"></div>
-  </section>
+<section id="v-prices" hidden>
+  <div class="bar">
+    <input type="search" id="q-p"><select id="f-pp"><option value=""></option></select>
+    <select id="f-pt"><option value=""></option></select>
+    <span class="count" id="cnt-p"></span>
+  </div>
+  <div class="twrap"><table><thead><tr>
+    <th data-s="platform"></th><th data-s="model_name"></th><th data-s="item_type"></th>
+    <th class="num" data-s="price_usd">$ /Mtok</th><th class="num" data-s="price_cny">¥ /Mtok</th>
+    <th class="num" data-i18n="colPeak"></th>
+  </tr></thead><tbody id="tb-p"></tbody></table></div>
+  <div class="empty" id="no-p" hidden></div>
+  <div class="pager" id="pager-p"></div>
+</section>
 
-  <!-- API -->
-  <section id="v-api" style="display:none">
-    <div class="bar"><input type="search" id="q-a" placeholder="搜索平台…"><span class="badge" id="cnt-a"></span></div>
-    <div class="cards" id="api-cards"></div>
-  </section>
+<section id="v-plans" hidden>
+  <div class="bar"><input type="search" id="q-pl"><span class="count" id="cnt-pl"></span></div>
+  <div id="plan-groups"></div>
+</section>
+
+<section id="v-api" hidden>
+  <div class="bar"><input type="search" id="q-a"><span class="count" id="cnt-a"></span></div>
+  <div class="cards" id="api-cards"></div>
+</section>
 </main>
-<footer>数据双时间戳溯源 · CNY 按 fx=7.1 折算 · 更新 2026-08-22 · <a style="color:var(--acc)" href="https://github.com/">GitHub</a></footer>
+<footer><span data-i18n="footer"></span> · <a href="https://github.com/moyu-good/llm-price-atlas">GitHub</a></footer>
 <script>
 const DATA = __DATA__;
 const $ = s => document.querySelector(s);
+const $$ = s => [...document.querySelectorAll(s)];
 const esc = s => (s??'').toString().replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-$('#meta').textContent = '更新 ' + DATA.meta.updated;
-$('#badges').innerHTML = ['platforms|平台','models|模型','pricing_rows|价格条目','plan_rows|套餐']
-  .map(x=>{const [k,l]=x.split('|');return `<span class="badge">${l} <b>${DATA.meta[k]}</b></span>`}).join('');
+const fmt = n => n==null ? '—' : (+n).toFixed(+(+n).toFixed(4).split('.')[1]===''?0:Math.min(4,(+n).toFixed(4).split('.')[1].length));
 
-// ---- tabs ----
-function showTab(k){
-  document.querySelectorAll('.tab').forEach(x=>x.classList.toggle('on',x.dataset.t===k));
-  ['pricing','plans','api'].forEach(t=>$('#v-'+t).style.display = t===k?'':'none');
-  if(location.hash !== '#'+k) history.replaceState(null,'','#'+k);
+/* ================= i18n ================= */
+const T = {
+ en:{title:"LLM Price Atlas",updated:"data updated",fx:"CNY = USD × 7.1 fixed FX",
+   tabs:{compare:"Compare",prices:"All prices",plans:"Plans",api:"API access"},
+   qCompare:"Search model…",qPrices:"Search model or provider…",qPlans:"Search plan / quota / included models…",qApi:"Search provider…",
+   allPlat:"All providers",allType:"All types",
+   colModel:"Model",colProv:"Provider",colType:"Type",colCh:"Sources",colPeak:"Peak / Off-peak ¥",
+   inLbl:"Best input",outLbl:"Best output",totalLbl:"In+Out",
+   rows:"rows",tiers:"tiers",providers:"providers",page:"Page",noResult:"No matches",
+   copy:"copy",copied:"✓ copied",noApi:"No public API (subscription product)",site:"website",
+   flatNote:"blended",expand:"quotes",
+   footer:"Dual-timestamp provenance — collected_at + effective_at on every row · every plan links its official source"},
+ zh:{title:"AI 模型价格图谱",updated:"数据更新于",fx:"人民币按 fx=7.1 折算",
+   tabs:{compare:"跨平台比价",prices:"价格明细",plans:"订阅套餐",api:"API 接入"},
+   qCompare:"搜索模型…",qPrices:"搜索模型或平台…",qPlans:"搜索套餐 / 额度 / 包含模型…",qApi:"搜索平台…",
+   allPlat:"全部平台",allType:"全部类型",
+   colModel:"模型",colProv:"平台",colType:"类型",colCh:"报价渠道",colPeak:"峰谷价(¥)",
+   inLbl:"最低输入",outLbl:"最低输出",totalLbl:"输入+输出",
+   rows:"条",tiers:"档",providers:"家",page:"页",noResult:"无匹配结果",
+   copy:"复制",copied:"✓ 已复制",noApi:"无公开API（订阅产品）",site:"官网",
+   flatNote:"综合价",expand:"条报价",
+   footer:"双时间戳溯源——每行价格带采集与生效时间 · 每个套餐可溯源官方出处"},
+};
+let LANG = localStorage.getItem('la-lang') || 'en';
+const t = k => T[LANG][k] ?? k;
+const TYPE_EN = {'输入':'Input','输出':'Output','综合价·$M':'Blended','输入·缓存命中':'Cache-hit in',
+                 '输入·缓存未命中':'Cache-miss in'};
+const tt = s => LANG==='en' ? (TYPE_EN[s] || (s||'').replace('输入','Input').replace('输出','Output')) : (s||'');
+
+function applyLang(){
+  document.documentElement.lang = LANG==='zh'?'zh-CN':'en';
+  $('#lang').innerHTML = LANG==='en' ? '<b>EN</b>/中文' : 'EN/<b>中文</b>';
+  $$('[data-i18n]').forEach(el=>el.textContent=t(el.dataset.i18n));
+  $('#tabs').querySelectorAll('.tab').forEach(b=>b.textContent=t('tabs')[b.dataset.t]);
+  $('#q-c').placeholder=t('qCompare'); $('#q-p').placeholder=t('qPrices');
+  $('#q-pl').placeholder=t('qPlans'); $('#q-a').placeholder=t('qApi');
+  $('#meta').textContent = `${t('updated')} ${DATA.meta.updated} · ${t('fx')}`;
+  $('#badges').innerHTML = ['platforms|providers','models|models','pricing_rows|rows','plan_rows|tiers']
+    .map(x=>{const[k,l]=x.split('|');return `<span class="badge">${esc(t(l)[0].toUpperCase()+t(l).slice(1))} <b>${DATA.meta[k]}</b></span>`}).join('');
+  renderAll();
 }
-document.querySelectorAll('.tab').forEach(t=>t.onclick=()=>showTab(t.dataset.t));
-window.addEventListener('hashchange',()=>{
-  const k=(location.hash||'#pricing').slice(1);
-  if(['pricing','plans','api'].includes(k)) showTab(k);
-});
-showTab((location.hash||'#pricing').slice(1));
 
-// ---- pricing tab ----
-const types = [...new Set(DATA.pricing.map(p=>p.item_type))];
-types.sort().forEach(t=>{const o=document.createElement('option');o.value=t;o.textContent=t;$('#f-type').appendChild(o)});
-[...new Set(DATA.pricing.map(p=>p.platform))].sort().forEach(p=>{const o=document.createElement('option');o.value=p;o.textContent=p;$('#f-plat').appendChild(o)});
-
-let sortK='price_usd', sortAsc=1;
-function typePill(t){
-  if(/输入/.test(t)&&/输出/.test(t)) return 'mix';
-  if(/输入/.test(t)) return 'in';
-  if(/输出/.test(t)) return 'out';
-  return t==='综合价·$M'?'mix':/图像|视频|语音/.test(t)?'other':'mix';
+/* ================= routing ================= */
+const VIEWS=['compare','prices','plans','api'];
+function show(k){
+  VIEWS.forEach(v=>{$('#v-'+v).hidden = v!==k;
+    $(`#tabs .tab[data-t=${v}]`).classList.toggle('on',v===k)});
+  history.replaceState(null,'','#'+k);
 }
+$('#tabs').addEventListener('click',e=>{const b=e.target.closest('.tab'); if(b) show(b.dataset.t)});
+window.addEventListener('hashchange',()=>{const k=location.hash.slice(1); if(VIEWS.includes(k)) show(k)});
+
+/* ================= helpers ================= */
+function typePill(x){
+  const s=x.item_type||'';
+  if(/输入/.test(s)&&!/输出/.test(s)) return ['in',tt(s)];
+  if(/输出/.test(s)) return ['out',tt(s)];
+  if(/综合价/.test(s)) return ['mix',tt(s)];
+  return ['other',tt(s)];
+}
+function pillHTML(p){const[c,l]=typePill(p);return `<span class="pill ${c}">${esc(l)}</span>`}
+
+/* ================= COMPARE ================= */
+const aggModels = (()=> {
+  const m={};
+  DATA.pricing.forEach(p=>{
+    const o=m[p.model_name] ||= {model:p.model_name,ch:new Set,in:null,inP:null,out:null,outP:null,flat:null,quotes:[]};
+    o.quotes.push(p);
+    if(!(o.ch.has(p.platform))) o.ch.add(p.platform);
+    const better=(a,b)=>a==null||b<a;
+    if(/^输入/.test(p.item_type)&&p.price_usd!=null&&better(o.in,p.price_usd)){o.in=p.price_usd;o.inP=p.platform}
+    else if(p.item_type==='输出'&&p.price_usd!=null&&better(o.out,p.price_usd)){o.out=p.price_usd;o.outP=p.platform}
+    else if(/综合价/.test(p.item_type)&&p.price_usd!=null&&better(o.flat,p.price_usd)){o.flat=p.price_usd}
+  });
+  return Object.values(m).map(o=>({...o,nch:o.ch.size,
+    total:(o.in!=null&&o.out!=null)?o.in+o.out:(o.flat!=null?o.flat:null)}))
+    .filter(o=>o.total!=null).sort((a,b)=>a.total-b.total);
+})();
+let cSort={k:'total',asc:1}, cOpen=new Set();
+function renderC(){
+  const q=$('#q-c').value.toLowerCase(), fp=$('#f-cp').value;
+  let list=aggModels.filter(o=>(!fp||o.ch.has(fp))&&(!q||o.model.toLowerCase().includes(q)));
+  const {k,asc}=cSort;
+  list.sort((a,b)=>((a[k]??Infinity)>(b[k]??Infinity)?1:-1)*asc);
+  $('#cnt-c').textContent=list.length+' '+t('rows');
+  $('#no-c').hidden=list.length>0;
+  const head={'model':t('colModel'),'ch':t('colCh'),'in$':t('inLbl'),'out$':t('outLbl'),'total':t('totalLbl')};
+  $$('#v-compare th[data-s]').forEach(th=>{
+    th.textContent=head[th.dataset.s]+(cSort.k===th.dataset.s?(cSort.asc?' ▲':' ▼'):'')});
+  $('#tb-c').innerHTML=list.map(o=>{
+    const open=cOpen.has(o.model);
+    let h=`<tr style="cursor:pointer" onclick="toggleDet(this,'${esc(o.model).replace(/'/g,"\\'")}')">
+      <td><b>${esc(o.model)}</b>${open?'':'<span style="color:var(--dim)"> · '+o.nch+' '+t('providers')}</span></td>
+      <td class="num">${o.nch}</td>
+      <td class="num">${o.in!=null?fmt(o.in)+' <span style="color:var(--dim);font-size:11px">@'+esc(o.inP)+'</span>':(o.flat!=null?fmt(o.flat)+'<span style="color:var(--dim)"> ('+t('flatNote')+')</span>':'—')}</td>
+      <td class="num">${o.out!=null?fmt(o.out)+' <span style="color:var(--dim);font-size:11px">@'+esc(o.outP)+'</span>':'—'}</td>
+      <td class="num"><b>${fmt(o.total)}</b></td>
+      <td class="num"><span class="chip">${o.nch} ${t('expand')}</span></td></tr>`;
+    if(open){
+      h+=`<tr class="det"><td colspan="6" style="padding:6px 24px">`+
+        o.quotes.map(p=>`<div style="padding:2px 0">${pillHTML(p)} <b>${esc(p.platform)}</b> — ${esc(p.model_name)} : `+
+          `<span style="color:var(--grn)">${p.price_usd!=null?'$'+fmt(p.price_usd):''}</span> ${p.source_url?`<a href="${esc(p.source_url)}" target="_blank">${LANG==='en'?'source':'出处'}</a>`:''}</div>`).join('')+
+        '</td></tr>';
+    }
+    return h}).join('');
+}
+window.toggleDet=(tr,model)=>{
+  cOpen.has(model)?cOpen.delete(model):cOpen.add(model); renderC();
+};
+
+/* ================= PRICES ================= */
+let pSort={k:'price_usd',asc:1}, pPage=1, PP=100;
 function renderP(){
-  const q=$('#q-p').value.toLowerCase(), fp=$('#f-plat').value, ft=$('#f-type').value;
-  let rows = DATA.pricing.filter(p=>
-    (!fp||p.platform===fp)&&(!ft||p.item_type===ft)&&
+  const q=$('#q-p').value.toLowerCase(), fp=$('#f-pp').value, ft=$('#f-pt').value;
+  const all=DATA.pricing.filter(p=>(!fp||p.platform===fp)&&(!ft||p.item_type===ft)&&
     (!q||(p.model_name+' '+p.platform).toLowerCase().includes(q)));
-  rows.sort((a,b)=>((a[sortK]??-1)<(b[sortK]??-1)?-1:1)*sortAsc);
-  $('#cnt-p').textContent = rows.length+' 条';
-  $('#no-p').style.display = rows.length?'none':'block';
-  $('#tb-p').innerHTML = rows.slice(0,800).map(p=>`<tr>
+  const {k,asc}=pSort;
+  all.sort((a,b)=>((a[k]??-1)>(b[k]??-1)?1:-1)*asc);
+  const pages=Math.max(1,Math.ceil(all.length/PP)); pPage=Math.min(pPage,pages);
+  const slice=all.slice((pPage-1)*PP,pPage*PP);
+  $('#cnt-p').textContent=all.length+' '+t('rows');
+  $('#no-p').hidden=all.length>0;
+  const head={'platform':t('colProv'),'model_name':t('colModel'),'item_type':t('colType'),'price_usd':'$ /Mtok','price_cny':'¥ /Mtok'};
+  $$('#v-prices th[data-s]').forEach(th=>{
+    th.textContent=(head[th.dataset.s]||'')+(pSort.k===th.dataset.s?(pSort.asc?' ▲':' ▼'):'')});
+  $('#tb-p').innerHTML=slice.map(p=>`<tr>
     <td>${esc(p.platform)}</td><td><b>${esc(p.model_name)}</b></td>
-    <td><span class="pill ${typePill(p.item_type)}">${esc(p.item_type)}</span></td>
-    <td class="num">${p.price_usd!=null?p.price_usd:'—'}</td>
-    <td class="num">${p.price_cny!=null?p.price_cny:'—'}</td>
-    <td class="num">${p.peak_price_cny?`${p.peak_price_cny}/${p.offpeak_price_cny}`:''}</td></tr>`).join('');
+    <td>${pillHTML(p)}</td>
+    <td class="num">${fmt(p.price_usd)}</td><td class="num">${fmt(p.price_cny)}</td>
+    <td class="num">${p.peak_price_cny?`${fmt(p.peak_price_cny)} / ${fmt(p.offpeak_price_cny)}`:'—'}</td></tr>`).join('');
+  $('#pager-p').innerHTML=pages<=1?'':
+    `<button ${pPage<=1?'disabled':''} onclick="goP(${pPage-1})">‹</button>
+     ${t('page')} ${pPage}/${pages}
+     <button ${pPage>=pages?'disabled':''} onclick="goP(${pPage+1})">›</button>`;
 }
-['#q-p','#f-plat','#f-type'].forEach(s=>$(s).addEventListener('input',renderP));
-document.querySelectorAll('#v-pricing th[data-s]').forEach(th=>th.onclick=()=>{
-  sortK=th.dataset.s; sortAsc*=-1; renderP();
-});
-renderP();
+window.goP=n=>{pPage=n;renderP()};
+['#q-p','#f-pp','#f-pt'].forEach(s=>$(s).addEventListener('input',()=>{pPage=1;renderP()}));
 
-// ---- plans tab ----
+/* ================= PLANS ================= */
 const byPlat={};
 DATA.plans.forEach(p=>{(byPlat[p.platform]=byPlat[p.platform]||[]).push(p)});
-function renderPl(){
+function renderPL(){
   const q=$('#q-pl').value.toLowerCase();
-  let html='', n=0;
+  let html='',n=0;
   Object.keys(byPlat).sort().forEach(pl=>{
     const list=byPlat[pl].filter(p=>!q||JSON.stringify(p).toLowerCase().includes(q));
     if(!list.length)return; n+=list.length;
-    html+=`<div class="grp open"><div class="head" onclick="this.parentElement.classList.toggle('open')">
-      <b>${esc(pl)}</b><span>${list.length} 档</span></div><div class="body">`+
+    html+=`<div class="grp${q?' open':''}"><div class="head" onclick="this.parentElement.classList.toggle('open')">
+      <b>${esc(pl)}</b><span>${list.length} ${t('tiers')}</span></div><div class="body">`+
       list.map(p=>`<div class="plan-row">
         <div><b>${esc(p.plan_name)}</b></div>
-        <div class="price">${p.price_cny!=null?(p.price_cny?('¥'+(+p.price_cny).toFixed(1).replace(/\.0$/,'')):'待核'):''}<span style="color:var(--dim);font-weight:400"> /${esc(p.period||'mo')}</span></div>
+        <div class="price">${p.price_cny!=null?(+p.price_cny?('¥'+(+p.price_cny).toFixed(1).replace(/\.0$/,'')):'待核'):''}<span style="color:var(--dim);font-weight:400">/${esc(p.period||'mo')}</span></div>
         <div class="quota">${esc(p.quota_desc||'')}</div>
-        ${p.models_included?`<div class="models">🧠 ${esc(p.models_included)}</div>`:''}</div>`).join('')+
-      '</div></div>';
+        ${p.models_included?`<div class="models">🧠 ${esc(p.models_included)}</div>`:''}</div>`).join('')+'</div></div>';
   });
-  $('#plan-groups').innerHTML=html||'<div class="empty">无匹配套餐</div>';
-  $('#cnt-pl').textContent=n+' 档';
+  $('#plan-groups').innerHTML=html||`<div class="empty">${t('noResult')}</div>`;
+  $('#cnt-pl').textContent=n+' '+t('tiers');
 }
-$('#q-pl').addEventListener('input',renderPl); renderPl();
+$('#q-pl').addEventListener('input',renderPL);
 
-// ---- api tab ----
-const apis = DATA.platforms.filter(p=>p.api_docs_url||p.openai_compatible);
-function renderApi(){
+/* ================= API ================= */
+const apis=DATA.platforms.filter(p=>p.api_docs_url||p.openai_compatible);
+function renderA(){
   const q=$('#q-a').value.toLowerCase();
   const list=apis.filter(p=>!q||JSON.stringify(p).toLowerCase().includes(q));
-  $('#cnt-a').textContent=list.length+' 平台';
+  $('#cnt-a').textContent=list.length+' '+t('providers');
   $('#api-cards').innerHTML=list.map(p=>`<div class="card">
-    <h3>${esc(p.name)} <span style="font-size:11px;color:var(--dim)">${esc(p.region||'')}</span></h3>
-    ${p.api_base_url?`<div class="kv">🔗 <code>${esc(p.api_base_url)}</code><button class="copy" onclick="cp(this)">复制</button></div>`:''}
-    ${p.api_docs_url?`<div class="kv">📚 <a href="${esc(p.api_docs_url)}" target="_blank">${esc(p.api_docs_url)}</a></div>`:''}
-    ${p.openai_compatible?`<div class="kv">🔌 ${esc(p.openai_compatible)}</div>`:`<div class="kv">无公开API</div>`}
-    ${p.url?`<div class="kv">🏠 <a href="${esc(p.url)}" target="_blank">官网</a></div>`:''}</div>`).join('')
-    ||'<div class="empty">无匹配</div>';
+    <h3>${esc(p.name)}<span style="font-size:11px;color:var(--dim)">${esc(p.region||'')}</span></h3>
+    ${p.api_base_url?`<div class="kv">🔗 <code>${esc(p.api_base_url)}</code><button class="copy" onclick="cp(this)">${t('copy')}</button></div>`:''}
+    ${p.api_docs_url?`<div class="kv">📚 <a href="${esc(p.api_docs_url)}" target="_blank" rel="noopener">${esc(p.api_docs_url)}</a></div>`:''}
+    <div class="kv">🔌 ${esc(p.openai_compatible||t('noApi'))}</div>
+    ${p.url?`<div class="kv">🏠 <a href="${esc(p.url)}" target="_blank" rel="noopener">${t('site')}</a></div>`:''}</div>`).join('')
+    ||`<div class="empty">${t('noResult')}</div>`;
 }
-$('#q-a').addEventListener('input',renderApi); renderApi();
-function cp(btn){navigator.clipboard.writeText(btn.previousElementSibling.textContent.trim());btn.textContent='✓'}
+$('#q-a').addEventListener('input',renderA);
+window.cp=b=>{navigator.clipboard.writeText(b.previousElementSibling.textContent.trim());b.textContent=t('copied')};
+
+/* ================= boot ================= */
+function renderAll(){renderC();renderP();renderPL();renderA()}
+// platform selects
+[...new Set(DATA.pricing.map(p=>p.platform))].sort().forEach(pl=>{
+  [['#f-cp'],['#f-pp']].forEach(([s])=>{const o=document.createElement('option');o.value=pl;o.textContent=pl;$(s).appendChild(o)})});
+[...new Set(DATA.pricing.map(p=>p.item_type))].sort().forEach(tp=>{
+  const o=document.createElement('option');o.value=tp;o.textContent=tp;$('#f-pt').appendChild(o)});
+$('#lang').onclick=()=>{LANG=LANG==='en'?'zh':'en';localStorage.setItem('la-lang',LANG);applyLang()};
+$('#q-c').addEventListener('input',renderC);
+$('#f-cp').addEventListener('input',renderC);
+$$('.th-sort').forEach(()=>{}); 
+$$('#v-compare th[data-s]').forEach(th=>th.onclick=()=>{
+  cSort = cSort.k===th.dataset.s ? {k:th.dataset.s,asc:-cSort.asc} : {k:th.dataset.s,asc:1}; renderC()});
+$$('#v-prices th[data-s]').forEach(th=>th.onclick=()=>{
+  pSort = pSort.k===th.dataset.s ? {k:th.dataset.s,asc:-pSort.asc} : {k:th.dataset.s,asc:1}; pPage=1; renderP()});
+applyLang();
+show(VIEWS.includes(location.hash.slice(1))?location.hash.slice(1):'compare');
 </script>
 </body>
 </html>
