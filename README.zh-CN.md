@@ -16,7 +16,7 @@
 
 [🌐 在线浏览器](#-交互式浏览器) · [快速开始](#-快速开始) · [数据模型](#-数据模型) · [核验方法论](#-核验方法论) · [更新日志](#-更新日志)
 
-<a href="https://moyu-good.github.io/llm-price-atlas/"><img src="docs/explorer_screenshot.png" alt="AI 价格图谱 · 交互式浏览器" width="100%"></a>
+<a href="https://moyu-good.github.io/llm-price-atlas/"><img src="docs/explorer_hero.png" alt="AI 价格图谱 · 交互式浏览器" width="100%"></a>
 
 **▶ [打开在线交互浏览器 — 免安装，手机可用](https://moyu-good.github.io/llm-price-atlas/)**
 

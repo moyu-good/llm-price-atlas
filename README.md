@@ -14,7 +14,7 @@
 
 [🌐 Interactive Explorer](#-interactive-explorer) · [Quick Start](#-quick-start) · [Schema](#-schema) · [Methodology](#-methodology) · [中文文档](README.zh-CN.md)
 
-<a href="https://moyu-good.github.io/llm-price-atlas/"><img src="docs/explorer_screenshot.png" alt="AI Price Atlas — Interactive Explorer" width="100%"></a>
+<a href="https://moyu-good.github.io/llm-price-atlas/"><img src="docs/explorer_hero.png" alt="AI Price Atlas — Interactive Explorer" width="100%"></a>
 
 **▶ [Open the live interactive explorer — no install, works on mobile](https://moyu-good.github.io/llm-price-atlas/)**
 
