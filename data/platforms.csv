@@ -1,133 +1,133 @@
-﻿id,name,region,url,notes,collected_at
+﻿id,name,region,url,notes,collected_at,api_docs_url,api_base_url,openai_compatible
 1,DeepSeek官方,,,"[DeepSeek官宣涨价V4 Pro高峰暴涨3.5倍 开发者还值得继续用吗？|特征生产_科技_v2|product_price|DeepSeek涨价|DeepSeekAPI调价|V4 Pro价格_新浪新闻] 3 days ago - 新价格于2026年8月17日零时生效，采用峰谷定价。V4 Pro高峰时段输出27元/百万tokens（涨350%）、闲时13.5元（涨125%）；V4 Flash高峰输出9元/百万tokens（涨350%）、闲时4.5元（涨125%）。高峰时段为每日9:00-12:00和14:00-18:00。据公开报...
 [DeepSeek API今起正式调价，最高涨幅达1100%_新浪财经_新浪网] 50 minutes ago - Pro价格是轻量级模型V4 Flash的大约三倍。以每百万tokens计算，V4 Pro输入是0.025元（缓存命中）和3元（缓存未命中），输出则是6元。 · 相比之下，V4 Flash对应的价格分别为0.02元、1元和2元。 ...
-[DeepSeek API今起正式调价，最高涨幅达1100%_新浪科技_新浪网] 33 minutes ago - Pro价格是轻量级模型V4 Flash的大约三倍。以每百万tokens计算，V4 Pro输入是0.025元（缓存命中）和3元（缓存未命中），输出则是6元。 · 相比之下，V4 Flash对应的价格分别为0.02元、1元和2元。 ...",2026-08-17
+[DeepSeek API今起正式调价，最高涨幅达1100%_新浪科技_新浪网] 33 minutes ago - Pro价格是轻量级模型V4 Flash的大约三倍。以每百万tokens计算，V4 Pro输入是0.025元（缓存命中）和3元（缓存未命中），输出则是6元。 · 相比之下，V4 Flash对应的价格分别为0.02元、1元和2元。 ...",2026-08-17,https://api-docs.deepseek.com,https://api.deepseek.com,OpenAI格式;另有Anthropic格式端点/api.deepseek.com/anthropic
 2,OpenRouter,,,"[DeepSeek V4 Flash 0423 - API Pricing & Benchmarks | OpenRouter] 4 days ago - DeepSeek V4 Flash is an efficiency-optimized Mixture-of-Experts model from DeepSeek with 284B total parameters and 13B activated parameters, supporting a 1M-token context window. $0.06146 per million input tokens, $0.1229 per million output tokens. ...
 [DeepSeek V4 Flash Latest - API Pricing & Benchmarks | OpenRouter] 2 weeks ago - This model always redirects to the latest model in the DeepSeek V4 Flash family. $0.0603 per million input tokens, $0.1206 per million output tokens. 1,048,576 token context window, maximum output of 262,144 tokens.
-[DeepSeek V4 Pro 0423 - API Pricing & Benchmarks | OpenRouter] 4 days ago - DeepSeek V4 Pro is a large-scale Mixture-of-Experts model from DeepSeek with 1.6T total parameters and 49B activated parameters, supporting a 1M-token context window. $0.348 per million input tokens, $0.696 per million output tokens. 1,048,576 ...",2026-08-17
+[DeepSeek V4 Pro 0423 - API Pricing & Benchmarks | OpenRouter] 4 days ago - DeepSeek V4 Pro is a large-scale Mixture-of-Experts model from DeepSeek with 1.6T total parameters and 49B activated parameters, supporting a 1M-token context window. $0.348 per million input tokens, $0.696 per million output tokens. 1,048,576 ...",2026-08-17,https://openrouter.ai/docs,https://openrouter.ai/api/v1,OpenAI兼容聚合网关
 3,硅基流动,,,"[大模型 API 价格方案 - 硅基流动 SiliconFlow] June 30, 2026 - 灵活透明的大模型 API 定价方案，支持按量计费与企业定制，满足各类 AI 开发与部署需求。
 [硅基流动 SiliconFlow - 致力于成为全球领先的 AI 能力提供商] 产品模型价格文档生态合作 · 关于 · 硅基流动上线高速版 GLM-5.2 · Code Arena全球第二，专攻长周期、高复杂度的软件工程，极大改变开发者与知识工作者的工作立即试用 · 硅基流动上线高速版 Kimi K2.7 Code · 会看屏幕，“想得更少、写得更好”的代码专家立即试用 · 硅基流动上线高速版DeepSeek-V4-Pro & Flash · 历时一年半打磨，百万字级别超长上下文处理能力，系统性能力跨越立即试用 ·
-[AI接口成本讨论之 DeepSeek 3.2 官方 API vs 硅基流动价格对比，2000 万 Tokens哪个更便宜？-腾讯云开发者社区-腾讯云] June 16, 2026 - 输入（缓存未命中）： 👉 2 元 / 百万 Tokens ... 👉 我的邀请链接（注册即送 2000 万 Tokens）： 🔗 https://cloud.siliconflow.cn/i/fh6LVgcV ... 如果你正准备接入 DeepSeek 3.2，不妨先用硅基流动把思...",2026-08-17
+[AI接口成本讨论之 DeepSeek 3.2 官方 API vs 硅基流动价格对比，2000 万 Tokens哪个更便宜？-腾讯云开发者社区-腾讯云] June 16, 2026 - 输入（缓存未命中）： 👉 2 元 / 百万 Tokens ... 👉 我的邀请链接（注册即送 2000 万 Tokens）： 🔗 https://cloud.siliconflow.cn/i/fh6LVgcV ... 如果你正准备接入 DeepSeek 3.2，不妨先用硅基流动把思...",2026-08-17,https://docs.siliconflow.cn,https://api.siliconflow.cn/v1,OpenAI兼容
 4,智谱,,,"[免费 AI API 总入口：DeepSeek、Qwen、Grok、GLM、Hunyuan...] 想测 Token 套餐：先看 上海电信 Token 套餐实测清单，再用 价格换算器 估算每百万 token 成本。直接排查智谱/GLM API 401：API key、base_url、model 权限、headers、额度、客户端默认配置和兼容 Agent 接入。
 [2026国产大模型巅峰对决：DeepSeek、Kimi、MiMo、GLM...] 4月20日 – Kimi K2.6 开源，一举登顶 SWE-bench Pro 全球第一. 4月23日 – 小米 MiMo V2.5-Pro 发布，罗福莉率队，开源模型并列榜首. 4月24日 – DeepSeek V4 Pro 预览版上线，百万级上下文窗口炸裂开源社区.API 价格（百万token）.
-[zyloo/glm-5 — 智谱 Zhipu API-Preise | Zyloo] Rufen Sie glm-5 (智谱 Zhipu GLM) über Zyloos einzelnen OpenAI-kompatiblen Endpunkt auf. $0.95 Eingabe / $2.50 Ausgabe pro 1M Tokens. 205K Kontextfenster. Ein API-Schlüssel, niedrigere Preise.",2026-08-17
+[zyloo/glm-5 — 智谱 Zhipu API-Preise | Zyloo] Rufen Sie glm-5 (智谱 Zhipu GLM) über Zyloos einzelnen OpenAI-kompatiblen Endpunkt auf. $0.95 Eingabe / $2.50 Ausgabe pro 1M Tokens. 205K Kontextfenster. Ein API-Schlüssel, niedrigere Preise.",2026-08-17,https://docs.bigmodel.cn,https://open.bigmodel.cn/api/paas/v4,OpenAI兼容
 5,月之暗面,,,"[月之暗面Kimi API 价格评测 2026：5 个套餐实测对比与最低价 | APIS Hub] 月之暗面官方提供 Kimi API 与会员订阅(Andante/Moderato)，覆盖长文本与深度研究场景。
 [模型推理价格说明 - Kimi API 开放平台] 1 day ago - 了解 Kimi 模型推理的 token 计费单位、输入输出计费方式、缓存优惠和各模型价格入口。
-[Kimi K3全面解读：2.8万亿参数登顶国产之巅，315亿美元估值背后月之暗面如何用「涨价」证明自己？] 9 hours ago - 横向对比：Anthropic在2024年底ARR约$10亿时估值约$180亿，2026年5月ARR冲到$470亿时估值飙至$9650亿。月之暗面$3亿ARR对应$315亿估值，倍数高于同期Anthropic——但资本市场愿意给这个溢价，核...",2026-08-17
+[Kimi K3全面解读：2.8万亿参数登顶国产之巅，315亿美元估值背后月之暗面如何用「涨价」证明自己？] 9 hours ago - 横向对比：Anthropic在2024年底ARR约$10亿时估值约$180亿，2026年5月ARR冲到$470亿时估值飙至$9650亿。月之暗面$3亿ARR对应$315亿估值，倍数高于同期Anthropic——但资本市场愿意给这个溢价，核...",2026-08-17,https://platform.moonshot.cn/docs,https://api.moonshot.cn/v1,OpenAI兼容
 6,MiniMax,,,"[2026年MiniMax API价格表：主流AI...] 2026年MiniMax API调用成本分五类：一、文本API按prompt/completion token计费；二、Coding Plan按请求次数（Starter/Plus/Max套餐）；三、国家超算平台低价购Tokens；四、NVIDIA NIM免费调用M2.1（40rpm限速）；五、阿里云. 百炼复用abab6.5s-chat每月1000万...
 [MiniMax API 价格评测 2026：5 个套餐实测对比与最低价 | APIS Hub] 2026年最新 MiniMax 大模型 API 价格评测。提供 5 个套餐真实对比，覆盖 GPT-5.2、Claude Sonnet 4.6、DeepSeek V3.2 等模型的输入/输出 Token 定价。
-[Kimi / MiniMax 免费额度实测：$1 能跑多少 token...] 模型列表和价格见 ofox.ai/zh/models。MiniMax M2.5 Lightning 和 M2.7 Highspeed 在速度和价格上有不同取舍，简单任务用轻量版能省一半以上。",2026-08-17
+[Kimi / MiniMax 免费额度实测：$1 能跑多少 token...] 模型列表和价格见 ofox.ai/zh/models。MiniMax M2.5 Lightning 和 M2.7 Highspeed 在速度和价格上有不同取舍，简单任务用轻量版能省一半以上。",2026-08-17,https://platform.minimaxi.com/document/guides,https://api.minimaxi.com/v1,OpenAI兼容
 7,阿里百炼,,,"[阿里云百炼 DeepSeek‑V4 价格：输入 1 元 / 百万 Tokens...] 阿里云百炼上线DeepSeek-V4-pro和DeepSeek-V4-flash两款模型，API价格与DeepSeek官网一致，百万Tokens输入最低仅需1元、输出最低仅需2元，在： 阿里云百炼平台 申请使用，开通免.
 [阿里云百炼DeepSeek-V4价格与官网一致，百万Tokens...] 以上是阿里云百科aliyunbaike.com分享的阿里云百炼DeepSeek-V4的介绍，一共两款模型即DeepSeek-V4-pro和DeepSeek-V4-flash，包括模型的上下文长度、输入输出百万Tokens费用价格等，领.
-[模型 & 价格 | DeepSeek API Docs] 模型 & 价格. 下表所列模型价格以“百万 tokens”为单位。(1) Responses API 目前仅支持 deepseek-v4-flash 模型，暂不支持 deepseek-v4-pro 模型。",2026-08-17
+[模型 & 价格 | DeepSeek API Docs] 模型 & 价格. 下表所列模型价格以“百万 tokens”为单位。(1) Responses API 目前仅支持 deepseek-v4-flash 模型，暂不支持 deepseek-v4-pro 模型。",2026-08-17,https://help.aliyun.com/zh/model-studio/getting-started/models,https://dashscope.aliyuncs.com/compatible-mode/v1,OpenAI兼容模式
 8,腾讯混元,,,"[半两财经 | Deepseek API...] 半两财经 | Deepseek API调用价格上调为每百万输出tokens8元，普通用户一直免费.此次涨价为每百万输入tokens2元，每百万输出tokens8元，涨价幅度高达2000%。
 [DeepSeek宣布API永久降价75%，每百万tokens最低0.025元] 这一API2.5折优惠活动，原定6月起恢复原价，但最新公告确认，DeepSeek-V4-ProAPI将永久降为原价的1/4（相当于2.5折），即：每百万tokens输入（缓存命中）0.025元，输入（缓.
-[腾讯逆袭！ 发布混元T1正式版，实战不输DeepSeek-R1，便宜3/4] T1是腾讯自研的强推理模型，吐字速度达到60~80token/s，在实际生成效果表现中远快于DeepSeek-R1。 DeepSeek API价格.",2026-08-17
+[腾讯逆袭！ 发布混元T1正式版，实战不输DeepSeek-R1，便宜3/4] T1是腾讯自研的强推理模型，吐字速度达到60~80token/s，在实际生成效果表现中远快于DeepSeek-R1。 DeepSeek API价格.",2026-08-17,,,
 9,百度千帆,,,"[DeepSeek API 峰谷定价方案公布，8 月 17 日生效 - IT之家] 百万 tokens 输出. deepseek-v4-flash.在此之前，DeepSeek V4 Pro 百万 tokens 输入（缓存命中）0.025 元；百万 tokens 输入（缓存未命中）3 元；百万 tokens 输出从 6 元。
 [突发，DeepSeek宣布降价75% - 文章 - 开发者社区 - 火山引擎] 2月26日，DeepSeek在其API开放平台发布错峰优惠活动通知。而在优惠时段（北京时间00:30-08:30），V3和R1的百万tokens输入（缓存命中）则均降为0.25元，百万tokens输出均降为4元。
-[百度千帆平台对接DeepSeek官方文档_百度deepseek接口文档-CSDN...] 百度智能云千帆平台已正式上线满血版本的DeepSeek-R1和DeepSeek-V3模型，提供超低调用价格（最低1.6元/百万Tokens）以及限时两周免费体验（2025-02-18 24点前. 1000RPM+10000TPM，请求tokens无上限）。",2026-08-17
+[百度千帆平台对接DeepSeek官方文档_百度deepseek接口文档-CSDN...] 百度智能云千帆平台已正式上线满血版本的DeepSeek-R1和DeepSeek-V3模型，提供超低调用价格（最低1.6元/百万Tokens）以及限时两周免费体验（2025-02-18 24点前. 1000RPM+10000TPM，请求tokens无上限）。",2026-08-17,https://cloud.baidu.com/doc/WENXINWORKSHOP/index.html,https://qianfan.baidubce.com/v2,OpenAI兼容v2接口
 10,讯飞星火,,,"[模型 & 价格 | DeepSeek API Docs] 扣费规则 扣减费用 = token 消耗量 × 模型单价，对应的费用将直接从充值余额或赠送余额中进行扣减。 当充值余额与赠送余额同时存在时，优先扣减赠送余额。 产品价格可能发生变动，DeepSeek 保留修改价格的权利。请您依据实际用量按需充值，定期查看此页面以获知最新价格信息。
 [讯飞星火 API 价格、免费额度与 OpenAI 兼容方案 — yangmao.ai] 讯飞星火 API 免费额度、价格说明、速率限制、OpenAI SDK 兼容性、中国大陆中转和低成本替代方案。
-[Showcase: dsh-deepseek-balance — session-header ... - GitHub] 2 days ago · The panel shows: Stats — total tokens / daily peak / longest chat / current streak / longest streak (days) Balance & Spend — today's spend, cumulative spend, live balance (with an ""API site"" button) Daily — two side-by-side calendars: daily period distribution (flat/peak/off-peak colors) + daily token usage (blue intensity)",2026-08-17
+[Showcase: dsh-deepseek-balance — session-header ... - GitHub] 2 days ago · The panel shows: Stats — total tokens / daily peak / longest chat / current streak / longest streak (days) Balance & Spend — today's spend, cumulative spend, live balance (with an ""API site"" button) Daily — two side-by-side calendars: daily period distribution (flat/peak/off-peak colors) + daily token usage (blue intensity)",2026-08-17,,,C端App会员
 11,OpenAI,,,"[Pricing | OpenAI API] Transcription models. Prices per 1M tokens unless noted.For gpt-4o-mini and gpt-4.1-mini with the non-preview web search tool, search content tokens are billed as a fixed block of 8,000 input tokens per call.
 [GPT-5.5 - API Pricing & Benchmarks | OpenRouter] $5 per million input tokens, $30 per million output tokens. 1,050,000 token context window, maximum output of 128,000 tokens.Throughput is how fast the model writes (tokens per second — higher is better). Latency is total round-trip time (lower is better).
-[Claude AI vs ChatGPT: Welche KI solltest du 2026 nutzen? · Mexta] GPT-5.6 Sol API pricing#. OpenAI prices Sol per million tokens. A request is treated as long context when it contains more than 272K input tokens; the higher rates then apply to the entire request, not only the tokens above the threshold.",2026-08-17
+[Claude AI vs ChatGPT: Welche KI solltest du 2026 nutzen? · Mexta] GPT-5.6 Sol API pricing#. OpenAI prices Sol per million tokens. A request is treated as long context when it contains more than 272K input tokens; the higher rates then apply to the entire request, not only the tokens above the threshold.",2026-08-17,https://developers.openai.com/api/docs,https://api.openai.com/v1,原生
 12,Anthropic,,,"[Claude API Pricing (2026): Per-Token Costs for Opus, Sonnet and...] Anthropic charges for the Claude API per million tokens, separately from any claude.ai subscription.Standard API rate per million tokens, input versus output, for the current Claude models. verified 2026-05-30.
 [Anthropic Acquires Stainless: What It Means for Claude API Pricing...] Anthropic's acquisition of Stainless signals major changes for Claude API pricing and developer tooling. Heavy API users should prepare for new cost structures.Current Claude API Costs by Model. Claude Haiku 4.5: $1.00 input / $5.00 output per million tokens.
-[Anthropic API vs Bedrock for Claude in Malaysia | Anchor Sprint] As of 2026, the per-token price for Claude is exactly the same on both platforms.It costs USD 3 per million input tokens and USD 15 per million output tokens. That's the price on Anthropic's API.",2026-08-17
+[Anthropic API vs Bedrock for Claude in Malaysia | Anchor Sprint] As of 2026, the per-token price for Claude is exactly the same on both platforms.It costs USD 3 per million input tokens and USD 15 per million output tokens. That's the price on Anthropic's API.",2026-08-17,https://platform.claude.com/docs,https://api.anthropic.com/v1,原生Messages;另提供OpenAI兼容/v1/chat/completions
 13,Google,,,"[Gemini API Pricing (August 2026): Model & Token Costs] 2 days ago · Compare current Google Gemini model pricing per 1M tokens: Gemini 3.6 Flash $1.50/$7.50, 3.1 Pro $2/$12 and 3.5 Flash-Lite $0.30/$2.50, with cache rates, Batch costs, and a Gemini pricing calculator. Last checked August 15, 2026.
 [Gemini API Pricing Calculator & Cost Guide (Aug 2026)] 2 days ago · Calculate Gemini API costs. Compare Gemini 3.1 Pro, 3.7 Flash, and 3.5 Flash-Lite per token with free tiers, batch API, and context caching discounts.
-[Google Gemini API Pricing 2026: Plans & Hidden Costs] Aug 8, 2026 · Google Gemini API costs Free to $18 per million tokens as of August 2026, with 4 plans available including a free tier. Plan: Free (free). Custom pricing is available on request. Pricing depends on your chosen tier, contract length, and negotiated discounts. Use the interactive pricing calculator to estimate your exact cost based on team size and requirements. Free tier: Yes",2026-08-17
+[Google Gemini API Pricing 2026: Plans & Hidden Costs] Aug 8, 2026 · Google Gemini API costs Free to $18 per million tokens as of August 2026, with 4 plans available including a free tier. Plan: Free (free). Custom pricing is available on request. Pricing depends on your chosen tier, contract length, and negotiated discounts. Use the interactive pricing calculator to estimate your exact cost based on team size and requirements. Free tier: Yes",2026-08-17,https://ai.google.dev/gemini-api/docs,https://generativelanguage.googleapis.com/v1beta/openai/,OpenAI兼容层;原生为generateContent
 14,xAI,,,"[xAI Grok API Pricing 2026: $0.2-$30 per million tokens] May 23, 2026 · xAI Grok API offers usage-based pricing from $1.25–$2.50 per million tokens as of August 2026 and custom pricing for larger requirements. Plan: Pay-as-you-go (Grok 4.3) (usage-based).
 [xAI Grok API Pricing 2026: Every Model, Context Window, and ...] May 7, 2026 · xAI’s Grok API in 2026 offers three distinct models priced from $0.20 to $6.00 per million tokens, with a 2M-token context window on the flagship tiers — undercutting Anthropic’s Claude Opus 4.7 by 92% on input costs and GPT-5.5 by 60% on output costs at comparable capability levels.
-[xAI Grok API Pricing June 2026 — Per-Million-Token Costs ...] May 16, 2026 · Official xAI Grok API pricing for June 2026. Grok 4.3 at $1.25/1M, Grok 4.1 Fast at $0.20/1M tokens. Free $175/mo credits, 2M context windows, batch discounts, and interactive cost calculator.",2026-08-17
+[xAI Grok API Pricing June 2026 — Per-Million-Token Costs ...] May 16, 2026 · Official xAI Grok API pricing for June 2026. Grok 4.3 at $1.25/1M, Grok 4.1 Fast at $0.20/1M tokens. Free $175/mo credits, 2M context windows, batch discounts, and interactive cost calculator.",2026-08-17,https://docs.x.ai,https://api.x.ai/v1,OpenAI兼容
 15,Mistral,,,"[Mistral AI Pricing 2026: Le Chat Plans & API Costs] This guide breaks down every price you care about, the four Le Chat plans, the full API rate card per million tokens, the free tier limits, and how the numbers stack up against ChatGPT, Claude, and DeepSeek. We verified all figures against Mistral’s official pricing page in June 2026...
 [Mistral API Pricing In 2026: Models, Le Chat Plans, And Costs] Mistral API pricing ranges from $0.02 input per million tokens (Nemo) to $2.00/$5.00 (Magistral Medium). The current flagship, Mistral Large 3, costs $0.50/$1.50 per MTok.
-[Mistral API Pricing & Cost Calculator (2026)] Current Mistral API pricing per million tokens — Medium, Small and the open-weight family — with a live cost calculator, worked examples, EU-jurisdiction notes and savings tips. Updated 2026-06-17 · prices auto-refreshed.",2026-08-17
+[Mistral API Pricing & Cost Calculator (2026)] Current Mistral API pricing per million tokens — Medium, Small and the open-weight family — with a live cost calculator, worked examples, EU-jurisdiction notes and savings tips. Updated 2026-06-17 · prices auto-refreshed.",2026-08-17,https://docs.mistral.ai,https://api.mistral.ai/v1,OpenAI兼容
 16,Groq,,,"[DeepSeek vs Groq (2026) — Full Comparison | ToolChase] API pricing starts at just $0.30 per million input tokens and $0.50 per million output tokens for V4, with cache hits dropping input cost to $0.03 per million tokens. DeepSeek R1 is the dedicated reasoning model for complex math, science, and logic tasks.
 [Groq API Pricing 2026: LPU Inference Costs Explained | DeployBase] Groq API pricing guide for 2026. LPU inference costs, billing models, cost optimization, and comparison to OpenAI, Anthropic. Current as of March 2026.Pricing: per-token like OpenAI. Free tier exists. Batch processing cuts 50%.
-[LLM API Pricing Comparison 2026: 30+ Models, Every... | Inference.net] The most complete LLM API pricing comparison for 2026 — covers 30+ models from OpenAI, Anthropic, Google, Mistral, plus open-source inference providers (Groq, Together AI, Fireworks AI, inference.net) that slash costs by 50–95%.",2026-08-17
+[LLM API Pricing Comparison 2026: 30+ Models, Every... | Inference.net] The most complete LLM API pricing comparison for 2026 — covers 30+ models from OpenAI, Anthropic, Google, Mistral, plus open-source inference providers (Groq, Together AI, Fireworks AI, inference.net) that slash costs by 50–95%.",2026-08-17,https://console.groq.com/docs/openai,https://api.groq.com/openai/v1,OpenAI兼容
 17,Novita,,,"[Novita - Intelligence, Performance & Price Analysis | Artificial Analysis] Price per token, shown in USD per million tokens.Prices on Novita vary up to 174x across models, from $0.02 per 1M tokens for Llama 3.1 8B to $4.00 per 1M tokens for DeepSeek R1 (Jan).
 [DeepSeek V4 Pro Pricing Guide 2026: Pricing, Providers & Cost...] Novita matches the $2.17 per 1M blended price and lands mid-pack on throughput at 35.6 tokens/sec, which is better than DeepInfra, DeepSeek, and SiliconFlow in the benchmark. Direct-from-model creator access.
-[Pricing | Novita AI] See pricing for 200+ AI models, GPU instances, and agent sandboxes. Developer-focused with startup-friendly rates.",2026-08-17
+[Pricing | Novita AI] See pricing for 200+ AI models, GPU instances, and agent sandboxes. Developer-focused with startup-friendly rates.",2026-08-17,,,
 18,DeepInfra,,,"[DeepSeek V4 Pro: Model Overview, Features & Performance Guide] DeepSeek V4 Pro is available on DeepInfra with usage-based pricing calculated per million tokens: Token Type. Price per 1M Tokens.
 [Claude 3.5 Haiku vs DeepSeek V3 (DeepInfra) — Pricing...] Save $4.63 per million tokens by choosing DeepSeek V3 (DeepInfra) over Claude 3.5 Haiku. Based on blended rate (1M input + 1M output).All pricing data reflects the latest published API rates per million tokens.
-[deepseek-ai/DeepSeek-V3 API – Pricing, Benchmarks... | Requesty] deepseek-ai/DeepSeek-V3 is priced at $0.85 per million input tokens and $0.90 per million output tokens when accessed via Requesty. Requesty charges exactly what the upstream provider charges — we don't add markup.",2026-08-17
+[deepseek-ai/DeepSeek-V3 API – Pricing, Benchmarks... | Requesty] deepseek-ai/DeepSeek-V3 is priced at $0.85 per million input tokens and $0.90 per million output tokens when accessed via Requesty. Requesty charges exactly what the upstream provider charges — we don't add markup.",2026-08-17,,,
 19,火山套餐,,,"[火山方舟 Coding Plan vs Agent Plan：2026 年选哪个更划算？] May 10, 2026 · 对比火山方舟 Coding Plan 和 Agent Plan 的区别：定位、支持的模型、额度、价格、适用场景。Coding Plan 专注编码，Agent Plan 覆盖全模态和多模态 Agent，帮你选对套餐。
 [火山方舟Agent Plan与Coding Plan对比：怎么选更划算？全场景AI订阅选...] May 12, 2026 · 双订阅计划全景解读 火山方舟目前采用双轨并行策略，全新上线的 Agent Plan 与持续运营的 Coding Plan 在定位、模型能力及适用场景上差异显著，且资源池相互独立。 方舟 Agent Plan：全模态智能体订阅 这是面向多模态与复杂 Agent 场景的进阶方案，深度集成了主流大模型与智能体框架。 核心模型： 涵盖 ...
-[火山方舟Coding Plan价格详解 每月多少钱？] Apr 9, 2026 · 火山方舟Coding Plan的高性价比核心优势 除了灵活的套餐价格，火山方舟Coding Plan还有多重优势提升性价比： 多模型自由切换：支持Auto智能调度模式，基于效果+速度双维度匹配最优模型，无需额外付费即可体验最新模型能力 全工具额度共享：订阅后可在所有支持的AI编程工具中使用套餐额度，无需 ...",2026-08-17
+[火山方舟Coding Plan价格详解 每月多少钱？] Apr 9, 2026 · 火山方舟Coding Plan的高性价比核心优势 除了灵活的套餐价格，火山方舟Coding Plan还有多重优势提升性价比： 多模型自由切换：支持Auto智能调度模式，基于效果+速度双维度匹配最优模型，无需额外付费即可体验最新模型能力 全工具额度共享：订阅后可在所有支持的AI编程工具中使用套餐额度，无需 ...",2026-08-17,,,
 20,GitHub Copilot,,,"[GitHub · Change is constant. GitHub keeps you ahead. · GitHub] GitHub CopilotWrite better code with AI. GitHub Copilot appDirect agents from issue to merge. MCP RegistryIntegrate external tools.
 [GitHub Copilot с 1 июня переходит на оплату по токенам... / Хабр] С 1 июня 2026 года GitHub Copilot перейдет на оплату по фактическому использованию: вместо месячного лимита премиум-запросов у каждого плана появится счет в новых кредитах GitHub AI Credits — они списываются по числу токенов, которые тратит модель.
-[Set up GitHub Copilot in VS Code] Access your GitHub Copilot subscription and set up GitHub Copilot in Visual Studio.Use a different GitHub account per workspace or profile. Remove AI features from VS Code.",2026-08-17
-21,Fireworks,,,,2026-08-17
-22,Together,,,,2026-08-17
-23,Parasail,,,,2026-08-17
-24,Cerebras,,,,2026-08-17
-25,SambaNova,,,,2026-08-17
-26,字节豆包,,,,2026-08-17
-27,阶跃星辰,,,,2026-08-17
-28,Cursor,,,,2026-08-17
-29,AWS Bedrock,,,,2026-08-17
-30,Azure OpenAI,,,,2026-08-17
-31,Cloudflare,,,,2026-08-17
-32,Replicate,,,,2026-08-17
-33,Modal,,,,2026-08-17
-34,Perplexity,,,,2026-08-17
-35,NVIDIA NIM,,,,2026-08-17
-36,Cohere,,,,2026-08-17
-37,Nous Research,,,,2026-08-17
-38,Meta Llama,,,,2026-08-17
-39,HuggingFace,,,,2026-08-17
-40,美团LongCat,,,,2026-08-17
-41,Windsurf,,,,2026-08-17
-42,Replit,,,,2026-08-17
-43,Bolt,,,,2026-08-17
-44,v0,,,,2026-08-17
-45,Devin,,,,2026-08-17
-46,Sourcegraph,,,,2026-08-17
-47,AmazonQ,,,,2026-08-17
-48,GeminiCodeAssist,,,,2026-08-17
-49,通义灵码,,,,2026-08-17
-50,CodeGeeX,,,,2026-08-17
-51,Comate,,,,2026-08-17
-52,CodeBuddy,,,,2026-08-17
-53,Trae,,,,2026-08-17
-54,MarsCode,,,,2026-08-17
-55,Midjourney,,,,2026-08-17
-56,Runway,,,,2026-08-17
-57,Kling,,,,2026-08-17
-58,即梦,,,,2026-08-17
-59,Sora,,,,2026-08-17
-60,Suno,,,,2026-08-17
-61,ElevenLabs,,,,2026-08-17
-62,HeyGen,,,,2026-08-17
-63,零一万物,,,,2026-08-17
-64,百川,,,,2026-08-17
-65,商汤,,,,2026-08-17
-66,昆仑万维,,,,2026-08-17
-67,华为盘古,,,,2026-08-17
-68,360智脑,,,,2026-08-17
-69,DeepBricks,,,,2026-08-17
-70,无问芯穹,,,,2026-08-17
-71,Z.ai,,,,2026-08-17
-72,GoogleOne,,,,2026-08-17
-73,Microsoft,,,,2026-08-17
-74,Lovable,,,,2026-08-17
-75,Coze,,,,2026-08-17
-76,Dify,,,,2026-08-17
-77,Voyage,,,,2026-08-17
-78,Jina,,,,2026-08-17
-79,OpenClaw,,,,2026-08-17
-80,n8n,,,,2026-08-17
-81,Stability,,,,2026-08-17
-82,Flux,,,,2026-08-17
-83,Manus,,,,2026-08-17
-84,Poe,,,,2026-08-17
-85,Pika,,,,2026-08-17
-86,Luma,,,,2026-08-17
-87,Ideogram,,,,2026-08-17
-88,Vidu,,,,2026-08-17
-89,Vertex AI,,,,2026-08-17
-90,Amazon Nova,,,,2026-08-17
-91,Microsoft Phi,,,,2026-08-17
-92,Adobe Firefly,,,,2026-08-17
+[Set up GitHub Copilot in VS Code] Access your GitHub Copilot subscription and set up GitHub Copilot in Visual Studio.Use a different GitHub account per workspace or profile. Remove AI features from VS Code.",2026-08-17,,,订阅内含Copilot API配额
+21,Fireworks,,,,2026-08-17,,,
+22,Together,,,,2026-08-17,https://docs.together.ai,https://api.together.xyz/v1,OpenAI兼容
+23,Parasail,,,,2026-08-17,,,
+24,Cerebras,,,,2026-08-17,,,
+25,SambaNova,,,,2026-08-17,,,
+26,字节豆包,,,,2026-08-17,https://www.volcengine.com/docs/82379,https://ark.cn-beijing.volces.com/api/v3,OpenAI兼容(火山方舟)
+27,阶跃星辰,,,,2026-08-17,,,
+28,Cursor,,,,2026-08-17,,,"IDE订阅,无独立API"
+29,AWS Bedrock,,,,2026-08-17,https://docs.aws.amazon.com/bedrock/latest/userguide/conversation-inference.html,https://bedrock-runtime.{region}.amazonaws.com/openai/v1,OpenAI兼容端点+原生Converse API
+30,Azure OpenAI,,,,2026-08-17,https://learn.microsoft.com/azure/ai-services/openai/,,原生(部署式端点)
+31,Cloudflare,,,,2026-08-17,,,
+32,Replicate,,,,2026-08-17,,,
+33,Modal,,,,2026-08-17,,,
+34,Perplexity,,,,2026-08-17,https://docs.perplexity.ai,https://api.perplexity.ai,OpenAI兼容(chat/completions)
+35,NVIDIA NIM,,,,2026-08-17,,,
+36,Cohere,,,,2026-08-17,,,
+37,Nous Research,,,,2026-08-17,,,
+38,Meta Llama,,,,2026-08-17,,,
+39,HuggingFace,,,,2026-08-17,https://huggingface.co/docs/inference-providers,https://router.huggingface.co/v1,OpenAI兼容路由
+40,美团LongCat,,,,2026-08-17,,,
+41,Windsurf,,,,2026-08-17,,,
+42,Replit,,,,2026-08-17,,,
+43,Bolt,,,,2026-08-17,,,
+44,v0,,,,2026-08-17,,,
+45,Devin,,,,2026-08-17,,,
+46,Sourcegraph,,,,2026-08-17,,,
+47,AmazonQ,,,,2026-08-17,,,
+48,GeminiCodeAssist,,,,2026-08-17,,,IDE/CLI
+49,通义灵码,,,,2026-08-17,,,IDE插件
+50,CodeGeeX,,,,2026-08-17,,,
+51,Comate,,,,2026-08-17,,,
+52,CodeBuddy,,,,2026-08-17,,,IDE
+53,Trae,,,,2026-08-17,,,IDE订阅
+54,MarsCode,,,,2026-08-17,,,IDE
+55,Midjourney,,,,2026-08-17,,,Discord/Web产品
+56,Runway,,,,2026-08-17,,,
+57,Kling,,,,2026-08-17,,,视频产品(有开放API但套餐为C端会员)
+58,即梦,,,,2026-08-17,,,
+59,Sora,,,,2026-08-17,,,
+60,Suno,,,,2026-08-17,,,
+61,ElevenLabs,,,,2026-08-17,https://elevenlabs.io/docs/api-reference/overview,https://api.elevenlabs.io/v1,音频专用REST
+62,HeyGen,,,,2026-08-17,,,
+63,零一万物,,,,2026-08-17,,,
+64,百川,,,,2026-08-17,,,
+65,商汤,,,,2026-08-17,,,
+66,昆仑万维,,,,2026-08-17,,,
+67,华为盘古,,,,2026-08-17,,,
+68,360智脑,,,,2026-08-17,,,
+69,DeepBricks,,,,2026-08-17,,,
+70,无问芯穹,,,,2026-08-17,,,
+71,Z.ai,,,,2026-08-17,,,
+72,GoogleOne,,,,2026-08-17,,,消费级订阅
+73,Microsoft,,,,2026-08-17,,,
+74,Lovable,,,,2026-08-17,,,App生成平台
+75,Coze,,,,2026-08-17,,,Bot平台
+76,Dify,,,,2026-08-17,,,可自部署LLMOps
+77,Voyage,,,,2026-08-17,,,
+78,Jina,,,,2026-08-17,,,
+79,OpenClaw,,,,2026-08-17,,,
+80,n8n,,,,2026-08-17,,,
+81,Stability,,,,2026-08-17,,,
+82,Flux,,,,2026-08-17,,,
+83,Manus,,,,2026-08-17,,,Agent产品
+84,Poe,,,,2026-08-17,,,
+85,Pika,,,,2026-08-17,,,视频产品
+86,Luma,,,,2026-08-17,,,
+87,Ideogram,,,,2026-08-17,,,
+88,Vidu,,,,2026-08-17,,,
+89,Vertex AI,,,,2026-08-17,,,
+90,Amazon Nova,,,,2026-08-17,,,
+91,Microsoft Phi,,,,2026-08-17,,,
+92,Adobe Firefly,,,,2026-08-17,,,Creative Cloud体系

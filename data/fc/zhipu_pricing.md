@@ -1,0 +1,1 @@
+![智谱AI](https://static.bigmodel.cn/wd-paas-front/static/images/loading.gif)

@@ -1,179 +1,195 @@
 ﻿id,platform_id,plan_name,price_cny,period,quota_desc,models_included,source_url,notes,collected_at,effective_at,region,currency
-1,19,Agent Plan Small,40.0,monthly,,Doubao-Seed/GLM-5.1/Kimi-K2.6等,codePick,限时9.9元起活动,2026-08-17,2026-08-17,,CNY
-2,19,Agent Plan Medium,200.0,monthly,,,codePick,Large/Max未公开精确价,2026-08-17,2026-08-17,,CNY
-3,19,Coding Plan 入门,40.0,monthly,,豆包/DeepSeek/Kimi/GLM等6款,国内AI编程套餐对比,活动折上9折低至8.9元,2026-08-17,2026-08-17,,CNY
-4,5,Kimi Andante,199.0,monthly,~10M tokens/5h窗口,Kimi K3,v2ex,,2026-08-17,2026-08-17,,CNY
-5,5,Kimi Moderato,,monthly,~20M tokens/5h窗口,Kimi K3,china-ai-arbitrage,价格未公开,2026-08-17,2026-08-17,,CNY
-6,5,Kimi Allegretto,199.0,monthly,~40M tokens/5h窗口,Kimi K3,v2ex,,2026-08-17,2026-08-17,,CNY
-7,5,Kimi Allegro,,monthly,~100M tokens/5h窗口,Kimi K3,china-ai-arbitrage,价格未公开,2026-08-17,2026-08-17,,CNY
-11,20,AI Credits（6/1起）,,monthly,按token计费,多模型,habr,2026-06-01起从月度限额改为按token计费,2026-08-17,2026-08-17,,USD
-12,5,Andante,199.0,monthly,~10M tokens/5h窗口,Kimi K3,,,2026-08-17,2026-08-17,,CNY
-13,5,Allegretto,199.0,monthly,~40M tokens/5h窗口,Kimi K3,,,2026-08-17,2026-08-17,,CNY
-14,5,Moderato,,monthly,~20M tokens/5h窗口,Kimi K3,,价格未公开,2026-08-17,2026-08-17,,CNY
-15,5,Allegro,,monthly,~100M tokens/5h窗口,Kimi K3,,价格未公开,2026-08-17,2026-08-17,,CNY
-16,6,Coding Plan Starter,29.0,monthly,,M2.1/M2.5/M2.7,,,2026-08-17,2026-08-17,,CNY
-17,6,Coding Plan Plus/Max,,monthly,,M2.7/highspeed,,6档+极速版；包年8.3折,2026-08-17,2026-08-17,,CNY
-18,10,Lite,,monthly,,,,轻度用户省钱,2026-08-17,2026-08-17,,CNY
-19,3,注册赠额,0.0,once,2000万tokens,DeepSeek等,,邀请链接注册赠送,2026-08-17,2026-08-17,,CNY
-22,12,Claude Pro,142.0,monthly,标准用量,Opus/Sonnet/Haiku,claude pricing,年付17/月,2026-08-17,2026-08-17,,USD
-23,12,Claude Max 5x,710.0,monthly,5x用量,Opus/Sonnet,claude pricing,,2026-08-17,2026-08-17,,USD
-24,12,Claude Max 20x,1420.0,monthly,20x用量,Opus/Sonnet,claude pricing,,2026-08-17,2026-08-17,,USD
-25,12,Claude Team,177.5,monthly,每人/月,Opus/Sonnet,claude pricing,年付20/人,2026-08-17,2026-08-17,,USD
-26,12,Claude Enterprise,142.0,monthly,每人+API用量计费,全模型,claude pricing,坐席20/月+API按量,2026-08-17,2026-08-17,,USD
-27,11,ChatGPT Go,56.8,monthly,基础额度,GPT-5.x,chatgpt,低价档,2026-08-17,2026-08-17,,USD
-28,11,ChatGPT Plus,142.0,monthly,标准额度,GPT-5.5等,chatgpt,动态限制,2026-08-17,2026-08-17,,USD
-29,11,ChatGPT Pro,710.0,monthly,深度长任务,GPT-5.5,chatgpt,,2026-08-17,2026-08-17,,USD
-30,28,Hobby,0.0,monthly,有限,,cursor.com,,2026-08-17,2026-08-17,,USD
-31,28,Pro,142.0,monthly,$20 credits,多模型,cursor.com,额度制,2026-08-17,2026-08-17,,USD
-32,28,Pro+,426.0,monthly,$70 credits,多模型,cursor.com,,2026-08-17,2026-08-17,,USD
-33,28,Ultra,1420.0,monthly,$400 credits,多模型,cursor.com,,2026-08-17,2026-08-17,,USD
-34,11,Codex(含于ChatGPT),0.0,monthly,Free档,GPT-5.5,chatgpt.com/codex,无独立订阅,2026-08-17,2026-08-17,,USD
-35,20,Free,0.0,monthly,有限,,github.com,,2026-08-17,2026-08-17,,USD
-36,20,Pro,71.0,monthly,AI Credits按token,多模型,habr,6/1起按token计费,2026-08-17,2026-08-17,,USD
-37,20,Business,134.9,monthly,按token,多模型,github.com,,2026-08-17,2026-08-17,,USD
-38,4,GLM Coding Plan Lite,118.0,monthly,"每周10,000 Credits",GLM-5.1等,智谱详解,7/30改版积分制；包季8折/包年7折,2026-08-17,2026-08-17,,CNY
-39,4,GLM Coding Plan,,monthly,,GLM-5.1旗舰,codepick,要GLM-5.1旗舰选它,2026-08-17,2026-08-17,,CNY
-40,19,Coding Plan Lite,40.0,monthly,18000次/月,Doubao-Seed/DeepSeek-V4-Pro/GLM-5.1/Kimi-K2.6等,2026.5横评,模型最丰富,2026-08-17,2026-08-17,,CNY
-41,6,Token Plan,,monthly,,M2.7,codepick,,2026-08-17,2026-08-17,,CNY
-42,7,Coding Plan,,monthly,,Qwen Coder,codepick,要千问Coder选它,2026-08-17,2026-08-17,,CNY
-43,27,Step Plan Mini,0.0,monthly,,Step 3.5,,限时免费,2026-08-17,2026-08-17,,CNY
-44,27,Step Plan Flash Plus,99.0,monthly,1600M credits,Step 3.5,,,2026-08-17,2026-08-17,,CNY
-45,39,免费档,0.0,monthly,限速,各家开源模型,,免费tier,2026-08-17,2026-08-17,,USD
-46,2,免费模型,0.0,monthly,14-17个免费模型,含GLM-4.5/4.7-flash等,,,2026-08-17,2026-08-15,,CNY
-47,1,新开发者赠额,0.0,once,500万tokens,V4 Flash/Pro,deepseek.ai/pricing,新账号免费,2026-08-17,2026-08-17,,CNY
-48,19,Coding Plan Pro,200.0,monthly,Lite的5倍用量,同上+更高速率,aiprod,原价200/月；首购特惠49.9已停,2026-08-17,2026-08-17,,CNY
-49,19,Agent Plan Large,,monthly,,企业向,,价格未公开,2026-08-17,2026-08-17,,CNY
-50,19,Agent Plan Max,,monthly,,企业向,,价格未公开,2026-08-17,2026-08-17,,CNY
-51,4,GLM Coding Plan Pro/Max,,monthly,积分制,GLM-5.3,z.ai,三档全覆盖，价格未公开,2026-08-17,2026-08-17,,CNY
-52,6,Token Plan Starter,,monthly,,M2.7,禾维AI,轻度尝鲜,2026-08-17,2026-08-17,,CNY
-53,6,Token Plan Plus,49.0,monthly,,M2.7/M3,MiniMax官方文档,官方文档确认¥49/月,2026-08-17,2026-08-17,,CNY
-54,6,Token Plan Max,119.0,monthly,4-5 Agent并发,M2.7/M3,禾维AI,,2026-08-17,2026-08-17,,CNY
-55,6,Token Plan Ultra,,monthly,,M3,禾维AI,重度畅用，价格未公开,2026-08-17,2026-08-17,,CNY
-56,40,2.0-Preview 付费包,9.9,once,5000万tokens,LongCat-2.0,longcat docs,缓存命中免费，Agent场景优化,2026-08-17,2026-08-17,,CNY
-57,41,Free,0.0,monthly,,,windsurf docs,,2026-08-17,2026-08-17,,USD
-58,41,Pro,106.5,monthly,500提示/月，可+$10/250提示,全高级模型,windsurf docs,2026-03起额度制,2026-08-17,2026-03,,USD
-59,41,Max,,monthly,,,windsurf docs,,2026-08-17,2026-08-17,,USD
-60,42,Core,142.0,monthly,,Replit Agent,replit.com,教育邮箱$10,2026-08-17,2026-08-17,,USD
-61,42,Team,284.0,monthly,,,replit.com,,2026-08-17,2026-08-17,,USD
-62,43,Bolt.new 订阅,,monthly,,,bolt.new,按token/积分,2026-08-17,2026-08-17,,USD
-63,44,v0 Free/付费,,monthly,,,v0.dev,按token计费,2026-08-17,2026-08-17,,USD
-64,45,Devin 2.0,142.0,monthly,,Devin,cognition.ai,2.0降价后$20起,2026-08-17,2026-08-17,,USD
-65,46,Cody Pro,63.9,monthly,,Cody,sourcegraph,~$9/user/mo,2026-08-17,2026-08-17,,USD
-66,46,Cody Enterprise,134.9,monthly,,Cody,sourcegraph,$19/user/mo,2026-08-17,2026-08-17,,USD
-67,47,Q Developer Free,0.0,monthly,,,aws,,2026-08-17,2026-08-17,,USD
-68,47,Q Developer Pro,134.9,monthly,,,aws,超4000行转换+$0.003/行,2026-08-17,2026-08-17,,USD
-69,48,Code Assist Standard,161.88,monthly,,Gemini,google cloud,个人版免费,2026-08-17,2026-08-17,,USD
-70,48,Code Assist Enterprise,383.4,monthly,,Gemini,google cloud,,2026-08-17,2026-08-17,,USD
-71,49,个人版,0.0,monthly,,Qwen,aliyun,个人免费,2026-08-17,2026-08-17,,CNY
-72,49,专业版,20.0,monthly,,Qwen,aliyun,估算,2026-08-17,2026-08-17,,CNY
-73,50,个人版,0.0,monthly,,GLM,codegeex.cn,完全免费110万装机,2026-08-17,2026-08-17,,CNY
-74,51,个人版,0.0,monthly,,ERNIE,comate,个人永久免费,2026-08-17,2026-08-17,,CNY
-75,52,付费会员,,monthly,,Claude-4.0-Sonnet等6模型,tencent,7/1前会员权益延续,2026-08-17,2026-08-17,,CNY
-76,53,SOLO/Pro,,monthly,,豆包,trae,2.0用户1200万，价未公开,2026-08-17,2026-08-17,,CNY
-77,54,免费版,0.0,monthly,,,marscode,,2026-08-17,2026-08-17,,CNY
-78,54,Pro,,monthly,1500 Credits,,marscode,2026-06起按AI Credits计费,2026-08-17,2026-08-17,,CNY
-79,34,Pro,142.0,monthly,近不限量Deep Research,多模型,perplexity,,2026-08-17,2026-08-17,,USD
-80,34,Max,1420.0,monthly,更高上限,,perplexity,,2026-08-17,2026-08-17,,USD
-81,34,Enterprise,284.0,monthly,,,perplexity,$40-325/seat,2026-08-17,2026-08-17,,USD
-82,55,Basic,71.0,monthly,Fast小时,,midjourney,,2026-08-17,2026-08-17,,USD
-83,55,Standard,213.0,monthly,,,midjourney,,2026-08-17,2026-08-17,,USD
-84,55,Pro,426.0,monthly,,,midjourney,,2026-08-17,2026-08-17,,USD
-85,55,Mega,852.0,monthly,,,midjourney,,2026-08-17,2026-08-17,,USD
-86,56,Standard,85.2,monthly,credits,,runway,Free/Standard/Pro/Max,2026-08-17,2026-08-17,,USD
-87,57,可灵会员,,monthly,,Kling 3.0,kling,价未公开,2026-08-17,2026-08-17,,USD
-88,58,基础/标准/高级,,monthly,积分制,,jimeng,2026多次调价,2026-08-17,2026-08-17,,CNY
-89,59,Sora Pro(独立),1420.0,monthly,4K/60fps/30min,Sora 2,openai,ChatGPT Plus含50次/日,2026-08-17,2026-08-17,,USD
-90,60,Pro,71.0,monthly,,,suno,Basic/Premier,2026-08-17,2026-08-17,,USD
-91,61,Starter,35.5,monthly,,,elevenlabs,年付$5/月,2026-08-17,2026-08-17,,USD
-92,62,Creator,205.9,monthly,GenCredits,,heygen,最低付费$29,2026-08-17,2026-08-17,,USD
-93,72,AI Pro,141.93,monthly,2TB存储+Gemini 3 Pro+Veo2,Gemini 3 Pro,google one,年付$199.99；促销$99.99/年,2026-08-17,2026-08,,USD
-94,72,AI Ultra,709.93,monthly,每日100次+Veo3,Gemini 3 Pro,google one,原$250→$199.99，新$99.99档,2026-08-17,2026-08-17,,USD
-95,72,AI Ultra(最高档),1419.93,monthly,,Gemini 3 Pro,google one,,2026-08-17,2026-08-17,,USD
-96,73,Copilot Pro,142.0,monthly,,GPT-5.x,microsoft,与365 Copilot合并中,2026-08-17,2026-08-17,,USD
-97,74,Free,0.0,monthly,,,lovable,,2026-08-17,2026-08-17,,USD
-98,74,Launch,355.0,monthly,积分制,,lovable,¥360/月，做MVP推荐,2026-08-17,2026-08-17,,USD
-99,74,基础版,177.5,monthly,,,lovable,,2026-08-17,2026-08-17,,USD
-100,75,扣子套餐,,monthly,升级中,GPT-4o/Gemini等,coze,订阅套餐全面升级，价未公开,2026-08-17,2026-08-17,,USD
-101,76,Cloud 免费版,0.0,monthly,,,dify,,2026-08-17,2026-08-17,,USD
-102,76,Cloud 专业版,,monthly,,,dify,价未公开,2026-08-17,2026-08-17,,USD
-103,78,免费额度,0.0,monthly,Embeddings+Reranker 1万token/月；Reader 100万/月,,jina,,2026-08-17,2026-08-17,,USD
-104,5,Kimi 会员(C端),,monthly,预约中,Kimi K3,kimi,K3发布后会员需预约，价未公开,2026-08-17,2026-08-17,,CNY
-105,26,豆包会员(C端),,monthly,,豆包,doubao,日活2亿但收入低，会员价未公开,2026-08-17,2026-08-17,,CNY
-106,9,文心一言(C端),0.0,monthly,,文心4.0,wenxin,已免费开放,2026-08-17,2026-08-17,,CNY
-107,7,通义千问App会员,,monthly,,Qwen,tongyi,价未公开,2026-08-17,2026-08-17,,CNY
-108,4,智谱清言会员,,monthly,,GLM,chatglm,价未公开,2026-08-17,2026-08-17,,CNY
-109,6,海螺AI(C端),0.0,monthly,每日100贝壳+10次生成,MiniMax H3,hailuo,国内版完全免费(6/15核实),2026-08-17,2026-08-17,,CNY
-110,79,开源自托管,0.0,monthly,,,openclaw,开源免费，成本=API用量+基础设施,2026-08-17,2026-08-17,,USD
-111,80,Cloud Starter,,monthly,执行次数计费,,n8n,Cloud/自架/Enterprise,2026-08-17,2026-08-17,,USD
-112,4,GLM Coding Plan Pro,538.0,monthly,"每周60,000 Credits",GLM-5.2,智谱详解,改版涨幅超150%；旧价¥216,2026-08-17,2026-07-30,,CNY
-113,4,GLM Coding Plan Max,1078.0,monthly,"每周140,000 Credits",GLM-5.2,智谱详解,改版涨幅61%；旧价¥576,2026-08-17,2026-07-30,,CNY
-114,5,Kimi K3 会员·免费,0.0,monthly,每月1次深度研究,Kimi K3,kimi,,2026-08-17,2026-08-17,,CNY
-115,5,Kimi K3 会员·最高档,699.0,monthly,,Kimi K3,chooseai,五档制，免费到699元/月,2026-08-17,2026-08-17,,CNY
-116,53,Free,0.0,monthly,,,trae pricing,,2026-08-17,2026-08-17,,CNY
-117,53,Lite,3.0,monthly,,,trae pricing,,2026-08-17,2026-08-17,,CNY
-118,53,Pro,10.0,monthly,,,trae pricing,,2026-08-17,2026-08-17,,CNY
-119,53,Pro+,30.0,monthly,,,trae pricing,,2026-08-17,2026-08-17,,CNY
-120,53,Ultra,100.0,monthly,,,trae pricing,,2026-08-17,2026-08-17,,CNY
-121,75,Premium(国际版),63.9,monthly,每天100条信息信用点,GPT-4o/GPT-3.5,蓝点网,,2026-08-17,2026-08-17,,USD
-122,75,个人免费版,0.0,monthly,,,coze,,2026-08-17,2026-08-17,,USD
-123,75,个人进阶/团队/企业版,,monthly,,,coze,价未公开,2026-08-17,2026-08-17,,USD
-124,76,Sandbox,0.0,monthly,200次免费GPT-4调用,,dify.ai,,2026-08-17,2026-08-17,,USD
-125,76,Professional,418.9,monthly,消息额度,,dify.ai,$59/月,2026-08-17,2026-08-17,,USD
-126,76,Team,1128.9,monthly,,,dify.ai,$159/月,2026-08-17,2026-08-17,,USD
-127,52,基础套餐,10.0,monthly,1000 credits,Claude-4.0-Sonnet等6模型,linux do,$10/月1000credit,2026-08-17,2026-08-17,,CNY
-128,61,Free,0.0,monthly,,,elevenlabs,,2026-08-17,2026-08-17,,USD
-129,61,Creator,156.2,monthly,,,elevenlabs,年付$18.33/月,2026-08-17,2026-08-17,,USD
-130,61,Pro,702.9,monthly,,,elevenlabs,年付$82.5/月,2026-08-17,2026-08-17,,USD
-131,61,Scale,2122.9,monthly,,,elevenlabs,年付$249.17/月,2026-08-17,2026-08-17,,USD
-132,26,豆包专业版(C端),68.0,monthly,,豆包,微博,2026-06-24上线,2026-08-17,2026-08-17,,CNY
-133,57,积分制会员,,monthly,按积分消耗：时长/分辨率/动作控制,Kling 3.0,kling-ai.com,价格未公开；积分消耗受视频时长/1080p/动作控制影响,2026-08-17,2026-08-17,,USD
-134,11,ChatGPT Plus·菲律宾区,115.8,monthly,,GPT-5.x,landian.news,玻区涨后唯一低价区 ₱999；无税,2026-08-17,2026-08-14,菲律宾,USD
-135,11,ChatGPT Plus·玻利维亚,144.13,monthly,,,landian.news,已从$11.94涨到$20.3，无优势,2026-08-17,2026-08-14,玻利维亚,USD
-136,11,ChatGPT Plus·印度,34.08,monthly,,,youtube,₹399约$4.8,2026-08-17,2026-08-17,印度,USD
-137,4,GLM Coding Plan Pro·国际版,638.0,monthly,,GLM-5.x,博客园,国际版比国内贵约100元，可用国内信用卡,2026-08-17,2026-04,国际版,CNY
-138,4,GLM-5.1 独立API,,monthly,8小时长程任务,GLM-5.1,ai模型价格对比,对齐Claude Opus 4.6,2026-08-17,2026-08-17,,CNY
-139,75,国内版(扣子),,monthly,仅云雀大模型,云雀,waytoagi,国内版只能用云雀；国际版支持GPT-3.5/4,2026-08-17,2026-08-17,国内,USD
-140,75,国际版,,monthly,GPT-4o/GPT-3.5,GPT系列,waytoagi,国际版支持GPT；Premium $9/月,2026-08-17,2026-08-17,国际,USD
-141,53,国际版,,monthly,builder beta,Gemini-2.5 Pro/GPT-4.1/GPT-4o,trae对比,国际版可用GPT-4.1/Gemini-2.5 Pro超级模型,2026-08-17,2026-08-17,国际,CNY
-142,53,国内版,,monthly,builder alpha,豆包,trae对比,国内版builder还在alpha,2026-08-17,2026-08-17,国内,CNY
-143,57,Standard,71.0,monthly,最小月度credit池,Kling 3.0,kling定价,国际版积分制,2026-08-17,2026-08-17,国际,USD
-144,57,Pro,262.7,monthly,credit池翻倍+更高优先级,Kling 3.0,kling定价,常用档,2026-08-17,2026-08-17,国际,USD
-145,57,低价入门,49.63,monthly,,Kling,kling价格,$6.99/月起,2026-08-17,2026-08-17,国际,USD
-146,6,海螺AI·国内版,0.0,monthly,每日100贝壳+10次生成,MiniMax H3,hailuo,完全免费(6/15核实),2026-08-17,2026-08-17,国内,CNY
-147,6,Hailuo AI·国际版,,monthly,首月35%off/首年25%off,Hailuo 02,hailuo,国际版订阅制，价未公开,2026-08-17,2026-08-17,国际,CNY
-148,1,API·国内人民币价,,monthly,峰谷定价,V4系列,deepseek,国内按人民币；海外按汇率折算,2026-08-17,2026-08-17,国内,CNY
-149,1,API·海外美元价,,monthly,高峰27元≈$3.8,V4系列,techflow,仍只有Claude Fable 5($50)零头,2026-08-17,2026-08-17,海外,CNY
-150,54,Pro·国际版,20.0,monthly,ACU按量，每ACU $2.25,,2026.8编程工具,$20/月起按ACU计费,2026-08-17,2026-08-17,国际,CNY
-151,20,Pro·按token,71.0,monthly,AI Credits按模型扣,多模型,waytocn,6/1起Chat/Agent/Review烧额度，补全免费；重度用户设Budget,2026-08-17,2026-06-01,,USD
-152,41,Pro·2026-03后,142.0,monthly,,,masatoman,2026-03起$15→$20，与Cursor同价,2026-08-17,2026-03,,USD
-153,69,APIMaster聚合,,monthly,DeepSeek V4 Pro/Kimi K3/MiniMax M3/GLM-5.2 6折,多模型,apimaster,2026-07-20发布，限时6折,2026-08-17,2026-08-17,,CNY
-154,69,ofox聚合,,monthly,Claude/GPT/Gemini+Kimi/MiniMax/GLM/DeepSeek 一个Key,全模型,ofox,OpenAI兼容协议,2026-08-17,2026-08-17,,CNY
-155,69,HolySheep直连,,monthly,Claude/GPT-5/Gemini/DeepSeek 一个Key无VPN,全模型,holysheep,,2026-08-17,2026-08-17,,CNY
-156,24,免费档,0.0,monthly,每天100万tokens,Llama/DeepSeek/Qwen,n202,,2026-08-17,2026-08-17,,USD
-157,83,Free,0.0,monthly,有限积分,,manus,,2026-08-17,2026-08-17,,USD
-158,83,Pro(标准),142.0,monthly,积分制,,manus,,2026-08-17,2026-08-17,,USD
-159,83,Pro(定制),284.0,monthly,,,manus,,2026-08-17,2026-08-17,,USD
-160,83,Pro(扩展),1420.0,monthly,,,manus,,2026-08-17,2026-08-17,,USD
-161,84,订阅起步,35.43,monthly,积分制，最高830万积分/月,GPT-5.5/Claude-Opus-4.7/Gemini/Veo-3.1,poe,5档起步$4.17/月；免费档2026-03削减至300积分,2026-08-17,2026-08-17,,USD
-162,13,AI Studio 免费档,0.0,monthly,Gemini 2.5 Flash Image 每日500张1024px,Gemini,laozhang,,2026-08-17,2026-08-17,,USD
-163,39,免费用户月额度,0.71,monthly,$0.10/月,200+模型,huggingface.co/docs,官方：无加价直通provider,2026-08-17,2026-08-17,,USD
-164,39,PRO用户月额度,14.2,monthly,$2/月,200+模型,huggingface.co/docs,Team/Enterprise每席$2/月共享,2026-08-17,2026-08-17,,USD
-165,85,Free,,monthly,基础额度,,pika pricing,,2026-08-17,2026-08-17,,USD
-166,85,Standard,71.0,monthly,credits,Pika 2.5,pika pricing,年付$8/月,2026-08-17,2026-08-17,,USD
-167,85,Pro,248.5,monthly,credits提升,Pika 2.5,pika pricing,,2026-08-17,2026-08-17,,USD
-168,85,Fancy,539.6,monthly,,Pika 2.5,pika pricing,仅年付,2026-08-17,2026-08-17,,USD
-169,86,订阅制,,monthly,credits,Ray 2/3.2,luma,价未公开,2026-08-17,2026-08-17,,USD
-170,87,免费档,,monthly,无需VPN无需卡,,ideogram,,2026-08-17,2026-08-17,,USD
-171,88,会员积分制,,monthly,积分，错峰无限,Vidu Q3,vidu,价未公开（会员积分制）,2026-08-17,2026-08-17,,USD
-172,13,NotebookLM(Gemini Notebook),,monthly,免费工具,Gemini,notebooklm,2026-07更名,2026-08-17,2026-08-17,,USD
-173,89,Gemini Workspace Starter,49.7,monthly,,Gemini,gemini pricing,Google Workspace 集成,2026-08-17,2026-08-17,,USD
-174,89,Gemini Workspace Standard,99.4,monthly,,,gemini pricing,,2026-08-17,2026-08-17,,USD
-175,89,Gemini Workspace Plus,156.2,monthly,,,gemini pricing,,2026-08-17,2026-08-17,,USD
-176,90,免费API Key,,monthly,免费开始,Nova全系,amazon,,2026-08-17,2026-08-17,,USD
-177,92,Free,,monthly,,,firefly pricing,,2026-08-17,2026-08-17,,USD
-178,92,Standard,70.93,monthly,credits,,firefly pricing,,2026-08-17,2026-08-17,,USD
-179,92,Pro,141.93,monthly,credits,,firefly pricing,,2026-08-17,2026-08-17,,USD
-180,92,Premium,1419.93,monthly,,,firefly pricing,,2026-08-17,2026-08-17,,USD
-181,13,Gemini Workspace Starter,49.7,monthly,,Gemini,gemini pricing,,2026-08-17,2026-08-17,,USD
-182,13,Gemini Workspace Standard,99.4,monthly,,,gemini pricing,,2026-08-17,2026-08-17,,USD
-183,13,Gemini Workspace Plus,156.2,monthly,,,gemini pricing,,2026-08-17,2026-08-17,,USD
+1,19,Agent Plan Small,40.0,monthly,,Doubao-Seed/GLM-5.1/Kimi-K2.6等,https://www.volcengine.com/product/doubao,限时9.9元起活动 | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,CNY
+2,19,Agent Plan Medium,200.0,monthly,,,https://www.volcengine.com/product/doubao,Large/Max未公开精确价 | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,CNY
+3,19,Coding Plan 入门,40.0,monthly,,豆包/DeepSeek/Kimi/GLM等6款,https://www.volcengine.com/product/doubao,活动折上9折低至8.9元 | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,CNY
+4,5,Kimi Andante,199.0,monthly,~10M tokens/5h窗口,Kimi K3,https://www.kimi.com/pricing, | 2026-08-22套餐复核◐出处已规范·数字未逐条核 | 2026-08-22◐数字待官网核验(kimi.com/pricing为JS渲染) | 2026-08-22⚠️官方套餐页已无Andante档(现为Moderato/Allegretto/Allegro/Vivace),2026-08-17,2026-08-17,,CNY
+5,5,Kimi Moderato,,monthly,~20M tokens/5h窗口,Kimi K3(1M上下文),https://www.kimi.com/pricing,"价格未公开 | 2026-08-22套餐复核◐出处已规范·数字未逐条核 | 2026-08-22◐官网JS渲染未取到数字,待人工",2026-08-17,2026-08-17,,CNY
+6,5,Kimi Allegretto,199.0,monthly,~40M tokens/5h窗口,Kimi K3(1M上下文),https://www.kimi.com/pricing, | 2026-08-22套餐复核◐出处已规范·数字未逐条核 | 2026-08-22◐数字待官网核验(kimi.com/pricing为JS渲染),2026-08-17,2026-08-17,,CNY
+7,5,Kimi Allegro,,monthly,~100M tokens/5h窗口,Kimi K3(1M上下文),https://www.kimi.com/pricing,"价格未公开 | 2026-08-22套餐复核◐出处已规范·数字未逐条核 | 2026-08-22◐官网JS渲染未取到数字,待人工",2026-08-17,2026-08-17,,CNY
+16,6,Coding Plan Starter,29.0,monthly,,M2.1/M2.5/M2.7,https://platform.minimaxi.com/document/price, | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,CNY
+17,6,Coding Plan Plus/Max,,monthly,,M2.7/highspeed,https://platform.minimaxi.com/document/price,6档+极速版；包年8.3折 | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,CNY
+18,10,Lite,,monthly,,,https://xinghuo.xfyun.cn/deskmember,轻度用户省钱 | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,CNY
+19,3,注册赠额,0.0,once,2000万tokens,DeepSeek等,https://cloud.siliconflow.cn/account/token,邀请链接注册赠送 | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,CNY
+22,12,Claude Pro,120.7,monthly,年付$17/月($200年)；月付$20；含Claude Code/Cowork/Design/Science；用量≥Free的5倍/5h窗口,Fable5(50%周额度)/Opus5/4.8/4.7/4.6/Sonnet5/4.6/Haiku4.5;200k上下文,https://claude.com/pricing,年付17/月 | 2026-08-22套餐复核✅官方页实核 | 实核,2026-08-17,2026-08-17,,USD
+23,12,Claude Max 5x,710.0,monthly,Pro用量的5倍/5h窗口；高优先级接入,Fable5(50%周额度)/Opus5/4.8/4.7/4.6/Sonnet5/4.6/Haiku4.5;200k上下文,https://claude.com/pricing, | 2026-08-22套餐复核✅官方页实核 | 实核,2026-08-17,2026-08-17,,USD
+24,12,Claude Max 20x,1420.0,monthly,Pro用量的20倍/5h窗口,Fable5(50%周额度)/Opus5/4.8/4.7/4.6/Sonnet5/4.6/Haiku4.5;200k上下文,https://claude.com/pricing, | 2026-08-22套餐复核✅官方页实核 | 实核,2026-08-17,2026-08-17,,USD
+25,12,Claude Team,142.0,monthly,"Standard席$20/席/月(年付,$25月付)：比Pro更多用量",同Pro全模型;500k上下文,https://claude.com/pricing,年付20/人 | 2026-08-22套餐复核✅官方页实核 | 实核：Team拆双席位制,2026-08-17,2026-08-17,,USD
+26,12,Claude Enterprise,142.0,monthly,$20/席/月+按API费率计使用量；SCIM/审计/HIPAA等,同Team;500k上下文,https://claude.com/pricing,坐席20/月+API按量 | 2026-08-22套餐复核✅官方页实核 | 实核,2026-08-17,2026-08-17,,USD
+27,11,ChatGPT Go,56.8,monthly,基础额度,GPT-5.6 Luna;Thinking Mini扩展;54K上下文,https://chatgpt.com/pricing,低价档 | 2026-08-22套餐复核◐出处已规范·数字未逐条核 | 2026-08-22✅Firecrawl实核,2026-08-17,2026-08-17,,USD
+28,11,ChatGPT Plus,142.0,monthly,标准额度,GPT-5.6 Sol/Terra/Luna;legacy模型;256K推理上下文,https://chatgpt.com/pricing,动态限制 | 2026-08-22套餐复核◐出处已规范·数字未逐条核 | 2026-08-22✅Firecrawl实核,2026-08-17,2026-08-17,,USD
+29,11,ChatGPT Pro,710.0,monthly,"From $100/月起(Pro 5x档,另有20x);Sol Pro/无限图像",全系无限:Sol/Sol Pro/Terra/Luna;128K即时+400K推理,https://chatgpt.com/pricing, | 2026-08-22套餐复核◐出处已规范·数字未逐条核 | 2026-08-22✅Firecrawl实核,2026-08-17,2026-08-17,,USD
+30,28,Hobby,0.0,monthly,有限,Composer;有限Agent请求,https://cursor.com/pricing, | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,USD
+31,28,Pro,142.0,monthly,Agent扩展额度,前沿模型全量;MCP/skills/hooks;云Agent;Bugbot按量,https://cursor.com/pricing,额度制 | 2026-08-22套餐复核◐出处已规范·数字未逐条核 | 2026-08-22✅官方页实核($20/月),2026-08-17,2026-08-17,,USD
+32,28,Pro+,426.0,monthly,Pro的3倍Agent额度,Pro全部×3额度;Grok Bot,https://cursor.com/pricing," | 2026-08-22套餐复核◐出处已规范·数字未逐条核 | 2026-08-22✅官方页实核倍数(价格JS渲染未取到,沿用$60)",2026-08-17,2026-08-17,,USD
+33,28,Ultra,1420.0,monthly,Pro的20倍Agent额度,Pro全部×20额度;新功能优先,https://cursor.com/pricing, | 2026-08-22套餐复核◐出处已规范·数字未逐条核 | 2026-08-22✅官方页实核倍数(价格沿用$200),2026-08-17,2026-08-17,,USD
+34,11,Codex(含于ChatGPT),0.0,monthly,Free档,GPT-5.5,https://chatgpt.com/pricing,无独立订阅 | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,USD
+38,4,GLM Coding Plan Lite,118.0,monthly,"每周10,000 Credits(年付¥94.4/月)",GLM-5.1等,https://open.bigmodel.cn/pricing,7/30改版积分制；包季8折/包年7折 | 2026-08-22套餐复核◐出处已规范·数字未逐条核 | 2026-08-22✅Firecrawl实抓,2026-08-17,2026-08-17,,CNY
+39,4,GLM Coding Plan,,monthly,,GLM-5.1旗舰,https://open.bigmodel.cn/pricing,要GLM-5.1旗舰选它 | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,CNY
+40,19,Coding Plan Lite,40.0,monthly,18000次/月,Doubao-Seed/DeepSeek-V4-Pro/GLM-5.1/Kimi-K2.6等,https://www.volcengine.com/product/doubao,模型最丰富 | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,CNY
+41,6,Token Plan,,monthly,,M2.7,https://platform.minimaxi.com/document/price, | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,CNY
+42,7,Coding Plan,,monthly,,Qwen Coder,codepick,要千问Coder选它 | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,CNY
+43,27,Step Plan Mini,0.0,monthly,,Step 3.5,https://platform.stepfun.com/interface-manage,限时免费 | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,CNY
+44,27,Step Plan Flash Plus,99.0,monthly,1600M credits,Step 3.5,https://platform.stepfun.com/interface-manage, | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,CNY
+45,39,免费档,0.0,monthly,限速,各家开源模型,https://huggingface.co/pricing,免费tier | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,USD
+46,2,免费模型,0.0,monthly,14-17个免费模型,含GLM-4.5/4.7-flash等,https://openrouter.ai/docs/faq, | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-15,,CNY
+47,1,新开发者赠额,0.0,once,500万tokens,V4 Flash/Pro,https://platform.deepseek.com/,新账号免费 | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,CNY
+48,19,Coding Plan Pro,200.0,monthly,Lite的5倍用量,同上+更高速率,https://www.volcengine.com/product/doubao,原价200/月；首购特惠49.9已停 | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,CNY
+49,19,Agent Plan Large,,monthly,,企业向,https://www.volcengine.com/product/doubao,价格未公开 | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,CNY
+50,19,Agent Plan Max,,monthly,,企业向,https://www.volcengine.com/product/doubao,价格未公开 | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,CNY
+51,4,GLM Coding Plan Pro/Max,,monthly,积分制,GLM-5.3,https://open.bigmodel.cn/pricing,三档全覆盖，价格未公开 | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,CNY
+52,6,Token Plan Starter,,monthly,,M2.7,https://platform.minimaxi.com/document/price,轻度尝鲜 | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,CNY
+53,6,Token Plan Plus,49.0,monthly,,M2.7/M3,https://platform.minimaxi.com/document/price,官方文档确认¥49/月 | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,CNY
+54,6,Token Plan Max,119.0,monthly,4-5 Agent并发,M2.7/M3,https://platform.minimaxi.com/document/price, | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,CNY
+55,6,Token Plan Ultra,,monthly,,M3,https://platform.minimaxi.com/document/price,重度畅用，价格未公开 | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,CNY
+56,40,2.0-Preview 付费包,9.9,once,5000万tokens,LongCat-2.0,longcat docs,缓存命中免费，Agent场景优化 | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,CNY
+57,41,Free,0.0,monthly,$0,,https://windsurf.com/pricing, | 2026-08-22套餐复核◐出处已规范·数字未逐条核 | 2026-08-22✅Firecrawl实抓,2026-08-22,2026-08-17,,USD
+58,41,Pro,142.0,monthly,$20/月,全高级模型,https://windsurf.com/pricing,2026-03起额度制 | 2026-08-22套餐复核◐出处已规范·数字未逐条核 | 2026-08-22✅实抓·原¥106.5为旧价,2026-08-22,2026-03,,USD
+59,41,Max,1420.0,monthly,$200/月,,https://windsurf.com/pricing, | 2026-08-22套餐复核◐出处已规范·数字未逐条核 | 2026-08-22✅Firecrawl实抓,2026-08-22,2026-08-17,,USD
+60,42,Core,142.0,monthly,,Replit Agent,replit.com,教育邮箱$10 | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,USD
+61,42,Team,284.0,monthly,,,replit.com, | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,USD
+62,43,Bolt.new 订阅,,monthly,,,bolt.new,按token/积分 | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,USD
+63,44,v0 Free/付费,,monthly,,,v0.dev,按token计费 | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,USD
+64,45,Devin 2.0,142.0,monthly,,Devin,cognition.ai,2.0降价后$20起 | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,USD
+65,46,Cody Pro,63.9,monthly,,Cody,sourcegraph,~$9/user/mo | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,USD
+66,46,Cody Enterprise,134.9,monthly,,Cody,sourcegraph,$19/user/mo | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,USD
+67,47,Q Developer Free,0.0,monthly,,,aws, | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,USD
+68,47,Q Developer Pro,134.9,monthly,,,aws,超4000行转换+$0.003/行 | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,USD
+69,48,Code Assist Standard,161.88,monthly,,Gemini,https://developers.google.com/gemini-code-assist/docs/pricing,个人版免费 | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,USD
+70,48,Code Assist Enterprise,383.4,monthly,,Gemini,https://developers.google.com/gemini-code-assist/docs/pricing, | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,USD
+71,49,个人版,0.0,monthly,,Qwen,https://tongyi.aliyun.com/lingma/buy,个人免费 | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,CNY
+72,49,专业版,20.0,monthly,,Qwen,https://tongyi.aliyun.com/lingma/buy,估算 | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,CNY
+73,50,个人版,0.0,monthly,,GLM,codegeex.cn,完全免费110万装机 | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,CNY
+74,51,个人版,0.0,monthly,,ERNIE,comate,个人永久免费 | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,CNY
+75,52,付费会员,,monthly,,Claude-4.0-Sonnet等6模型,https://www.codebuddy.ai/pricing,7/1前会员权益延续 | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,CNY
+76,53,SOLO/Pro,,monthly,,豆包,https://www.trae.ai/pricing,2.0用户1200万，价未公开 | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,CNY
+77,54,免费版,0.0,monthly,,,https://www.marscode.cn/pricing, | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,CNY
+78,54,Pro,,monthly,1500 Credits,,https://www.marscode.cn/pricing,2026-06起按AI Credits计费 | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,CNY
+79,34,Pro,142.0,monthly,近不限量Deep Research,多模型,https://www.perplexity.ai/pro, | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,USD
+80,34,Max,1420.0,monthly,更高上限,,https://www.perplexity.ai/pro, | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,USD
+81,34,Enterprise,284.0,monthly,,,https://www.perplexity.ai/pro,$40-325/seat | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,USD
+82,55,Basic,71.0,monthly,Fast小时,,https://docs.midjourney.com/hc/en-us/articles/27870494071693, | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,USD
+83,55,Standard,213.0,monthly,,,https://docs.midjourney.com/hc/en-us/articles/27870494071693, | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,USD
+84,55,Pro,426.0,monthly,,,https://docs.midjourney.com/hc/en-us/articles/27870494071693, | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,USD
+85,55,Mega,852.0,monthly,,,https://docs.midjourney.com/hc/en-us/articles/27870494071693, | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,USD
+86,56,Standard,85.2,monthly,credits,,runway,Free/Standard/Pro/Max | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,USD
+87,57,可灵会员,,monthly,,Kling 3.0,https://app.klingai.com/global/membership,价未公开 | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,USD
+88,58,基础/标准/高级,,monthly,积分制,,jimeng,2026多次调价 | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,CNY
+89,59,Sora Pro(独立),1420.0,monthly,4K/60fps/30min,Sora 2,openai,ChatGPT Plus含50次/日 | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,USD
+90,60,Pro,71.0,monthly,,,suno,Basic/Premier | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,USD
+91,61,Starter,42.6,monthly,30k credits/月,,https://elevenlabs.io/pricing,年付$5/月 | 2026-08-22套餐复核◐出处已规范·数字未逐条核 | 2026-08-22✅实抓·原$5涨价至$6,2026-08-22,2026-08-17,,USD
+92,62,Creator,205.9,monthly,GenCredits,,heygen,最低付费$29 | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,USD
+96,73,Copilot Pro,142.0,monthly,,GPT-5.x,microsoft,与365 Copilot合并中 | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,USD
+97,74,Free,0.0,monthly,,,https://lovable.dev/pricing, | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,USD
+98,74,Launch,355.0,monthly,积分制,,https://lovable.dev/pricing,¥360/月，做MVP推荐 | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,USD
+99,74,基础版,177.5,monthly,,,https://lovable.dev/pricing, | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,USD
+100,75,扣子套餐,,monthly,升级中,GPT-4o/Gemini等,https://www.coze.cn/pricing,订阅套餐全面升级，价未公开 | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,USD
+101,76,Cloud 免费版,0.0,monthly,,,https://dify.ai/pricing, | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,USD
+102,76,Cloud 专业版,,monthly,,,https://dify.ai/pricing,价未公开 | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,USD
+103,78,免费额度,0.0,monthly,Embeddings+Reranker 1万token/月；Reader 100万/月,,jina, | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,USD
+104,5,Kimi 会员(C端),,monthly,预约中,Kimi K3,https://www.kimi.com/pricing,"K3发布后会员需预约，价未公开 | 2026-08-22套餐复核◐出处已规范·数字未逐条核 | 2026-08-22◐官网JS渲染未取到数字,待人工",2026-08-17,2026-08-17,,CNY
+105,26,豆包会员(C端),,monthly,,豆包,doubao,日活2亿但收入低，会员价未公开 | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,CNY
+106,9,文心一言(C端),0.0,monthly,,文心4.0,wenxin,已免费开放 | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,CNY
+107,7,通义千问App会员,,monthly,,Qwen,tongyi,价未公开 | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,CNY
+108,4,智谱清言会员,,monthly,,GLM,https://open.bigmodel.cn/pricing,价未公开 | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,CNY
+109,6,海螺AI(C端),0.0,monthly,每日100贝壳+10次生成,MiniMax H3,https://platform.minimaxi.com/document/price,国内版完全免费(6/15核实) | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,CNY
+110,79,开源自托管,0.0,monthly,,,openclaw,开源免费，成本=API用量+基础设施 | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,USD
+111,80,Cloud Starter,,monthly,执行次数计费,,n8n,Cloud/自架/Enterprise | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,USD
+112,4,GLM Coding Plan Pro,538.0,monthly,"每周60,000 Credits(年付¥430.4/月)",GLM-5.2,https://open.bigmodel.cn/pricing,改版涨幅超150%；旧价¥216 | 2026-08-22套餐复核◐出处已规范·数字未逐条核 | 2026-08-22✅Firecrawl实抓,2026-08-17,2026-07-30,,CNY
+113,4,GLM Coding Plan Max,1078.0,monthly,"每周140,000 Credits(年付¥862.4/月)",GLM-5.2,https://open.bigmodel.cn/pricing,改版涨幅61%；旧价¥576 | 2026-08-22套餐复核◐出处已规范·数字未逐条核 | 2026-08-22✅Firecrawl实抓,2026-08-17,2026-07-30,,CNY
+114,5,Kimi K3 会员·免费,0.0,monthly,每月1次深度研究,Kimi K3,https://www.kimi.com/pricing, | 2026-08-22套餐复核◐出处已规范·数字未逐条核 | 2026-08-22◐数字待官网核验(kimi.com/pricing为JS渲染),2026-08-17,2026-08-17,,CNY
+115,5,Kimi K3 会员·最高档,699.0,monthly,,Kimi K3,https://www.kimi.com/pricing,"五档制，免费到699元/月 | 2026-08-22套餐复核◐出处已规范·数字未逐条核 | 2026-08-22◐数字待官网核验(kimi.com/pricing为JS渲染) | 2026-08-22◐C端会员与Code套餐分线,待核",2026-08-17,2026-08-17,,CNY
+116,53,Free,0.0,monthly,,,https://www.trae.ai/pricing, | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,CNY
+117,53,Lite,21.3,monthly,(原记录误存USD$3)($5基础用量),,https://www.trae.ai/pricing, | 2026-08-22套餐复核◐出处已规范·数字未逐条核 | 2026-08-22◐币种修复$3→¥21.3;待官网核验 | 2026-08-22✅Firecrawl实抓$3/月(Pro有7天试用),2026-08-17,2026-08-17,,CNY
+118,53,Pro,71.0,monthly,(原记录误存USD$10)($20基础用量),,https://www.trae.ai/pricing, | 2026-08-22套餐复核◐出处已规范·数字未逐条核 | 2026-08-22◐币种修复$10→¥71.0;待官网核验 | 2026-08-22✅Firecrawl实抓$10/月(Pro有7天试用),2026-08-17,2026-08-17,,CNY
+119,53,Pro+,213.0,monthly,(原记录误存USD$30),,https://www.trae.ai/pricing, | 2026-08-22套餐复核◐出处已规范·数字未逐条核 | 2026-08-22◐币种修复$30→¥213.0;待官网核验 | 2026-08-22✅Firecrawl实抓$30/月(Pro有7天试用),2026-08-17,2026-08-17,,CNY
+120,53,Ultra,710.0,monthly,(原记录误存USD$100)($400基础用量),,https://www.trae.ai/pricing, | 2026-08-22套餐复核◐出处已规范·数字未逐条核 | 2026-08-22◐币种修复$100→¥710.0;待官网核验 | 2026-08-22✅Firecrawl实抓$100/月(Pro有7天试用),2026-08-17,2026-08-17,,CNY
+121,75,Premium(国际版),63.9,monthly,每天100条信息信用点,GPT-4o/GPT-3.5,https://www.coze.cn/pricing, | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,USD
+122,75,个人免费版,0.0,monthly,,,https://www.coze.cn/pricing, | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,USD
+123,75,个人进阶/团队/企业版,,monthly,,,https://www.coze.cn/pricing,价未公开 | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,USD
+124,76,Sandbox,0.0,monthly,200次免费GPT-4调用,,https://dify.ai/pricing, | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,USD
+125,76,Professional,418.9,monthly,消息额度,,https://dify.ai/pricing,$59/月 | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,USD
+126,76,Team,1128.9,monthly,,,https://dify.ai/pricing,$159/月 | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,USD
+127,52,基础套餐,10.0,monthly,1000 credits,Claude-4.0-Sonnet等6模型,https://www.codebuddy.ai/pricing,$10/月1000credit | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,CNY
+128,61,Free,0.0,monthly,10k credits/月,,https://elevenlabs.io/pricing, | 2026-08-22套餐复核◐出处已规范·数字未逐条核 | 2026-08-22✅Firecrawl实抓,2026-08-22,2026-08-17,,USD
+129,61,Creator,78.1,monthly,121k credits/月,,https://elevenlabs.io/pricing,年付$18.33/月 | 2026-08-22套餐复核◐出处已规范·数字未逐条核 | 2026-08-22✅实抓·原$22降价至$11,2026-08-22,2026-08-17,,USD
+130,61,Pro,702.9,monthly,600k credits/月,,https://elevenlabs.io/pricing,年付$82.5/月 | 2026-08-22套餐复核◐出处已规范·数字未逐条核 | 2026-08-22✅Firecrawl实抓,2026-08-22,2026-08-17,,USD
+131,61,Scale,2122.9,monthly,1.8M credits/月,,https://elevenlabs.io/pricing,年付$249.17/月 | 2026-08-22套餐复核◐出处已规范·数字未逐条核 | 2026-08-22✅Firecrawl实抓,2026-08-22,2026-08-17,,USD
+132,26,豆包专业版(C端),68.0,monthly,,豆包,微博,2026-06-24上线 | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,CNY
+133,57,积分制会员,,monthly,按积分消耗：时长/分辨率/动作控制,Kling 3.0,https://app.klingai.com/global/membership,价格未公开；积分消耗受视频时长/1080p/动作控制影响 | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,USD
+134,11,ChatGPT Plus·菲律宾区,115.8,monthly,,GPT-5.x,https://chatgpt.com/pricing,玻区涨后唯一低价区 ₱999；无税 | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-14,菲律宾,USD
+135,11,ChatGPT Plus·玻利维亚,144.13,monthly,,,https://chatgpt.com/pricing,已从$11.94涨到$20.3，无优势 | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-14,玻利维亚,USD
+136,11,ChatGPT Plus·印度,34.08,monthly,,,https://chatgpt.com/pricing,₹399约$4.8 | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,印度,USD
+137,4,GLM Coding Plan Pro·国际版,638.0,monthly,,GLM-5.x,https://open.bigmodel.cn/pricing,国际版比国内贵约100元，可用国内信用卡 | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-04,国际版,CNY
+138,4,GLM-5.1 独立API,,monthly,8小时长程任务,GLM-5.1,https://open.bigmodel.cn/pricing,对齐Claude Opus 4.6 | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,CNY
+139,75,国内版(扣子),,monthly,仅云雀大模型,云雀,https://www.coze.cn/pricing,国内版只能用云雀；国际版支持GPT-3.5/4 | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,国内,USD
+140,75,国际版,,monthly,GPT-4o/GPT-3.5,GPT系列,https://www.coze.cn/pricing,国际版支持GPT；Premium $9/月 | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,国际,USD
+141,53,国际版,,monthly,builder beta,Gemini-2.5 Pro/GPT-4.1/GPT-4o,https://www.trae.ai/pricing,国际版可用GPT-4.1/Gemini-2.5 Pro超级模型 | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,国际,CNY
+142,53,国内版,,monthly,builder alpha,豆包,https://www.trae.ai/pricing,国内版builder还在alpha | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,国内,CNY
+143,57,Standard,71.0,monthly,最小月度credit池,Kling 3.0,https://app.klingai.com/global/membership,国际版积分制 | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,国际,USD
+144,57,Pro,262.7,monthly,credit池翻倍+更高优先级,Kling 3.0,https://app.klingai.com/global/membership,常用档 | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,国际,USD
+145,57,低价入门,49.63,monthly,,Kling,https://app.klingai.com/global/membership,$6.99/月起 | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,国际,USD
+146,6,海螺AI·国内版,0.0,monthly,每日100贝壳+10次生成,MiniMax H3,https://platform.minimaxi.com/document/price,完全免费(6/15核实) | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,国内,CNY
+147,6,Hailuo AI·国际版,,monthly,首月35%off/首年25%off,Hailuo 02,https://platform.minimaxi.com/document/price,国际版订阅制，价未公开 | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,国际,CNY
+148,1,API·国内人民币价,,monthly,峰谷定价,V4系列,https://platform.deepseek.com/,国内按人民币；海外按汇率折算 | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,国内,CNY
+149,1,API·海外美元价,,monthly,高峰27元≈$3.8,V4系列,https://platform.deepseek.com/,仍只有Claude Fable 5($50)零头 | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,海外,CNY
+150,54,Pro·国际版,20.0,monthly,ACU按量，每ACU $2.25,,https://www.marscode.cn/pricing,$20/月起按ACU计费 | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,国际,CNY
+153,69,APIMaster聚合,,monthly,DeepSeek V4 Pro/Kimi K3/MiniMax M3/GLM-5.2 6折,多模型,https://deepbricks.ai/pricing,2026-07-20发布，限时6折 | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,CNY
+154,69,ofox聚合,,monthly,Claude/GPT/Gemini+Kimi/MiniMax/GLM/DeepSeek 一个Key,全模型,https://deepbricks.ai/pricing,OpenAI兼容协议 | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,CNY
+155,69,HolySheep直连,,monthly,Claude/GPT-5/Gemini/DeepSeek 一个Key无VPN,全模型,https://deepbricks.ai/pricing, | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,CNY
+156,24,免费档,0.0,monthly,每天100万tokens,Llama/DeepSeek/Qwen,n202, | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,USD
+157,83,Free,0.0,monthly,有限积分,,https://manus.im/pricing, | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,USD
+158,83,Pro(标准),142.0,monthly,积分制,,https://manus.im/pricing, | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,USD
+159,83,Pro(定制),284.0,monthly,,,https://manus.im/pricing, | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,USD
+160,83,Pro(扩展),1420.0,monthly,,,https://manus.im/pricing, | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,USD
+161,84,订阅起步,35.43,monthly,积分制，最高830万积分/月,GPT-5.5/Claude-Opus-4.7/Gemini/Veo-3.1,poe,5档起步$4.17/月；免费档2026-03削减至300积分 | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,USD
+162,13,AI Studio 免费档,0.0,monthly,Gemini 2.5 Flash Image 每日500张1024px,Gemini,https://one.google.com/about/google-ai-plans, | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,USD
+163,39,免费用户月额度,0.71,monthly,$0.10/月,200+模型,https://huggingface.co/pricing,官方：无加价直通provider | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,USD
+164,39,PRO用户月额度,14.2,monthly,$2/月,200+模型,https://huggingface.co/pricing,Team/Enterprise每席$2/月共享 | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,USD
+165,85,Free,,monthly,基础额度,,https://pika.art/pricing, | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,USD
+166,85,Standard,71.0,monthly,credits,Pika 2.5,https://pika.art/pricing,年付$8/月 | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,USD
+167,85,Pro,248.5,monthly,credits提升,Pika 2.5,https://pika.art/pricing, | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,USD
+168,85,Fancy,539.6,monthly,,Pika 2.5,https://pika.art/pricing,仅年付 | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,USD
+169,86,订阅制,,monthly,credits,Ray 2/3.2,luma,价未公开 | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,USD
+170,87,免费档,,monthly,无需VPN无需卡,,ideogram, | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,USD
+171,88,会员积分制,,monthly,积分，错峰无限,Vidu Q3,vidu,价未公开（会员积分制） | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,USD
+172,13,NotebookLM(Gemini Notebook),,monthly,免费工具,Gemini,https://one.google.com/about/google-ai-plans,2026-07更名 | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,USD
+173,89,Gemini Workspace Starter,49.7,monthly,,Gemini,https://cloud.google.com/vertex-ai/generative-ai/pricing,Google Workspace 集成 | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,USD
+174,89,Gemini Workspace Standard,99.4,monthly,,,https://cloud.google.com/vertex-ai/generative-ai/pricing, | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,USD
+175,89,Gemini Workspace Plus,156.2,monthly,,,https://cloud.google.com/vertex-ai/generative-ai/pricing, | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,USD
+176,90,免费API Key,,monthly,免费开始,Nova全系,amazon, | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,USD
+177,92,Free,,monthly,,,https://www.adobe.com/products/firefly/plans.html, | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,USD
+178,92,Standard,70.93,monthly,credits,,https://www.adobe.com/products/firefly/plans.html, | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,USD
+179,92,Pro,141.93,monthly,credits,,https://www.adobe.com/products/firefly/plans.html, | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,USD
+180,92,Premium,1419.93,monthly,,,https://www.adobe.com/products/firefly/plans.html, | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,USD
+181,13,Gemini Workspace Starter,49.7,monthly,,Gemini,https://one.google.com/about/google-ai-plans, | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,USD
+182,13,Gemini Workspace Standard,99.4,monthly,,,https://one.google.com/about/google-ai-plans, | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,USD
+183,13,Gemini Workspace Plus,156.2,monthly,,,https://one.google.com/about/google-ai-plans, | 2026-08-22套餐复核◐出处已规范·数字未逐条核,2026-08-17,2026-08-17,,USD
+184,12,Claude Team Premium,710.0,monthly,"Premium席$100/席/月(年付,$125月付)=标准席5倍用量",同Team全模型;标准席5倍用量,https://claude.com/pricing, | 2026-08-22套餐复核✅新增(官方Team双席位),2026-08-22,2026-08-22,,USD
+185,6,MiniMax 语音HD包一,630.0,monthly,¥700原价省10%；200万字符/T2A v2/RPM60/赠10克隆音色/1个月,T2A,https://platform.minimaxi.com/document/price,2026-08-22套餐复核✅官方页实抓,2026-08-22,2026-08-22,,CNY
+186,6,MiniMax 语音HD包二,5950.0,monthly,¥7000省15%；2000万字符/RPM200/赠30音色/3个月,T2A,https://platform.minimaxi.com/document/price,2026-08-22套餐复核✅官方页实抓,2026-08-22,2026-08-22,,CNY
+187,6,MiniMax 语音HD包三,56000.0,monthly,¥70000省20%；2亿字符/RPM500/赠300音色/1年,T2A,https://platform.minimaxi.com/document/price,2026-08-22套餐复核✅官方页实抓,2026-08-22,2026-08-22,,CNY
+188,6,MiniMax 语音Turbo包一,360.0,monthly,¥400省10%；200万字符/Turbo系列/RPM60/1个月,T2A,https://platform.minimaxi.com/document/price,2026-08-22套餐复核✅官方页实抓,2026-08-22,2026-08-22,,CNY
+189,6,MiniMax 语音Turbo包二,3400.0,monthly,¥4000省15%；2000万字符/RPM200/3个月,T2A,https://platform.minimaxi.com/document/price,2026-08-22套餐复核✅官方页实抓,2026-08-22,2026-08-22,,CNY
+190,6,MiniMax 语音Turbo包三,32000.0,monthly,¥40000省20%；2亿字符/RPM500/1年,T2A,https://platform.minimaxi.com/document/price,2026-08-22套餐复核✅官方页实抓,2026-08-22,2026-08-22,,CNY
+191,20,Copilot Pro,71.0,monthly,1500 AI Credits/月(Base1000+Flex500),Haiku4.5/Sonnet4.5/Sonnet4.6/Sonnet5/Gemini3.1Pro/Gemini3.5-3.7Flash/GPT-5mini/GPT-5.3-Codex/GPT-5.4/GPT-5.4mini,https://docs.github.com/en/copilot/get-started/plans,2026-08-22✅官方docs实核,2026-08-22,2026-08-22,,
+192,20,Copilot Pro+,276.9,monthly,7000 AI Credits/月(3900+3100)；premium模型,Pro全部+Opus4.7/Opus4.8(含fast)/Opus5/Fable5/GPT-5.4nano,https://docs.github.com/en/copilot/get-started/plans,2026-08-22✅官方docs实核,2026-08-22,2026-08-22,,
+193,20,Copilot Max,710.0,monthly,20000 AI Credits/月(10000+10000)；premium模型优先,同Pro+且premium模型优先接入;20000cr/月,https://docs.github.com/en/copilot/get-started/plans,2026-08-22✅官方docs实核,2026-08-22,2026-08-22,,
+194,20,Copilot Business,134.9,monthly,1900 Credits/人/月；⚠️2026-04-22起新组织自助注册暂停,premium模型(Gemini/Opus4.7+/Fable5);1900cr/人,https://docs.github.com/en/copilot/get-started/plans,2026-08-22✅官方docs实核,2026-08-22,2026-08-22,,
+195,20,Copilot Enterprise,276.9,monthly,3900 Credits/人/月；企业级能力,premium模型优先;3900cr/人,https://docs.github.com/en/copilot/get-started/plans,2026-08-22✅官方docs实核,2026-08-22,2026-08-22,,
+196,20,Copilot Free,0.0,monthly,有限功能；2000补全/月；仅自动选模,仅自动选模;2000补全/月,https://docs.github.com/en/copilot/get-started/plans,2026-08-22✅官方docs实核,2026-08-22,2026-08-22,,
+197,20,Copilot Student,0.0,monthly,认证学生免费,自动选模;不含第三方agent,https://docs.github.com/en/copilot/get-started/plans,2026-08-22✅官方docs实核,2026-08-22,2026-08-22,,
+198,28,Teams Standard,284.0,monthly,$40/人/月；团队管理/SSO/Bugbot,,https://cursor.com/pricing,2026-08-22✅官方页实核,2026-08-22,2026-08-22,,
+199,5,Kimi Code Moderato,134.9,monthly,$19/月(年付$15=$180)；周刷新额度；K3可用,Kimi K3(1M上下文),https://www.kimi.com/code,2026-08-22✅Firecrawl实抓,2026-08-22,2026-08-22,,
+200,5,Kimi Code Allegretto,276.9,monthly,$39/月(年付$31=$372)；更高并发,Kimi K3(1M上下文),https://www.kimi.com/code,2026-08-22✅Firecrawl实抓,2026-08-22,2026-08-22,,
+201,5,Kimi Code Allegro,702.9,monthly,$99/月(年付$79=$948),Kimi K3(1M上下文),https://www.kimi.com/code,2026-08-22✅Firecrawl实抓,2026-08-22,2026-08-22,,
+202,5,Kimi Code Vivace,1412.9,monthly,$199/月(年付$159=$1908)；最高周额度,Kimi K3(1M上下文),https://www.kimi.com/code,2026-08-22✅Firecrawl实抓·新增档位,2026-08-22,2026-08-22,,
+203,72,Google AI Plus,35.4,monthly,$4.99/月,Gemini应用级;基础Veo/Flow额度,https://one.google.com/about/google-ai-plans,2026-08-22✅Firecrawl实抓,2026-08-22,2026-08-22,,
+204,72,Google AI Pro,141.9,monthly,$19.99/月;含5TB存储,Gemini 3.1 Pro/Flow/Veo更高额;Whisk;NotebookLM加成,https://one.google.com/about/google-ai-plans,2026-08-22✅Firecrawl实抓,2026-08-22,2026-08-22,,
+205,72,Google AI Ultra 5x,709.9,monthly,$99.99/月;20TB起,全模型最高额;Veo 3;Project Mariner,https://one.google.com/about/google-ai-plans,2026-08-22✅Firecrawl实抓,2026-08-22,2026-08-22,,
+206,72,Google AI Ultra 20x,1419.9,monthly,$199.99/月,全模型最高额;Veo 3;Project Mariner,https://one.google.com/about/google-ai-plans,2026-08-22✅Firecrawl实抓,2026-08-22,2026-08-22,,
+207,61,Business,7029.0,monthly,6M credits/月,,https://elevenlabs.io/pricing,2026-08-22✅实抓·新增档位,2026-08-22,2026-08-22,,
+208,57,Kling Standard,62.5,monthly,$8.8/月(首单再享7折),,https://app.klingai.com/global/membership,2026-08-22✅Firecrawl实抓(首购价体系),2026-08-22,2026-08-22,,
+209,57,Kling Pro,231.2,monthly,$32.56/月(首单再享7折),,https://app.klingai.com/global/membership,2026-08-22✅Firecrawl实抓(首购价体系),2026-08-22,2026-08-22,,
+210,57,Kling Premier,574.8,monthly,$80.96/月(首单再享7折),,https://app.klingai.com/global/membership,2026-08-22✅Firecrawl实抓(首购价体系),2026-08-22,2026-08-22,,
+211,39,PRO,63.9,monthly,$9/月,,https://huggingface.co/pricing,2026-08-22✅Firecrawl实抓,2026-08-22,2026-08-22,,
+212,41,Team,568.0,monthly,$80/月+$40/全职开发席;含Devin Desktop,各成员独立额度;Devin Desktop,https://windsurf.com/pricing,2026-08-22✅实抓·新增档位,2026-08-22,2026-08-22,,
