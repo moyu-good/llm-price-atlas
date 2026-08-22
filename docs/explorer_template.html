@@ -3,92 +3,128 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>LLM Price Atlas — AI Model & Subscription Prices</title>
-<meta name="description" content="Verified pricing database: 92 AI providers, 581 models, 1,323 API prices and 194 subscription plans. Dual-timestamp provenance, offline single-file explorer.">
+<title>Price Atlas — AI Model &amp; Subscription Prices</title>
+<meta name="description" content="Verified pricing for 92 AI providers, 581 models, 1,323 API prices and 194 subscription plans. Dual-timestamp provenance, offline-first single-file explorer.">
 <meta property="og:title" content="LLM Price Atlas">
-<meta property="og:description" content="92 AI providers · 581 models · 1,323 verified prices · 194 plans — compare and explore offline.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%97%84%EF%B8%8F%3C/text%3E%3C/svg%3E">
+<meta property="og:description" content="Verified AI pricing across 92 providers — compare models, plans and API endpoints offline.">
+<meta property="og:image" content="https://moyu-good.github.io/llm-price-atlas/docs/explorer_hero.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230c0d10'/%3E%3Ctext x='32' y='42' font-family='Georgia' font-size='30' fill='%23c9ae6e' text-anchor='middle'%3EPA%3C/text%3E%3C/svg%3E">
 <style>
-:root{--bg:#0d1117;--bg2:#161b22;--bd:#30363d;--fg:#e6edf3;--dim:#8b949e;--acc:#58a6ff;--grn:#3fb950;--org:#d29922}
+:root{--bg:#0c0d10;--s1:#12141a;--line:rgba(233,230,223,.09);--gold:#c9ae6e;--tx:#e9e6df;--tx2:#8e8a80}
 *{box-sizing:border-box;margin:0;padding:0}
-body{background:var(--bg);color:var(--fg);font:14px/1.55 -apple-system,"Segoe UI",Roboto,"PingFang SC","Microsoft YaHei",sans-serif;padding-bottom:50px}
-header{position:sticky;top:0;z-index:10;background:rgba(13,17,23,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--bd);padding:12px 20px 0}
-.hrow{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
-h1{font-size:19px;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
-h1 .sub{color:var(--dim);font-size:12px;font-weight:400}
-#lang{background:var(--bg2);border:1px solid var(--bd);border-radius:6px;color:var(--fg);padding:4px 12px;font-size:12px;cursor:pointer}
-#lang b{color:var(--acc)}
-.badges{display:flex;gap:8px;margin-top:6px;flex-wrap:wrap}
-.badge{background:var(--bg2);border:1px solid var(--bd);border-radius:20px;padding:1px 11px;font-size:12px;color:var(--dim)}
-.badge b{color:var(--acc)}
-.tabs{display:flex;gap:4px;margin-top:10px;overflow-x:auto}
-.tab{padding:8px 16px;border:1px solid var(--bd);border-bottom:none;border-radius:8px 8px 0 0;cursor:pointer;color:var(--dim);background:transparent;font-size:13px;white-space:nowrap}
-.tab.on{color:var(--fg);background:var(--bg2);font-weight:600}
-main{max-width:1280px;margin:0 auto;padding:16px 16px}
-.bar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px;align-items:center}
-input,select{background:var(--bg2);border:1px solid var(--bd);border-radius:6px;color:var(--fg);padding:7px 10px;font-size:13px}
+body{background:var(--bg);color:var(--tx);font:14px/1.55 -apple-system,"Segoe UI",Roboto,"PingFang SC","Microsoft YaHei",sans-serif;padding-bottom:60px;-webkit-font-smoothing:antialiased}
+a{color:var(--gold);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+
+/* ---- masthead ---- */
+.mast{padding:26px 0 18px;text-align:center;border-bottom:1px solid var(--line)}
+.wordmark{font:400 15px/1 Georgia,serif;letter-spacing:.42em;color:var(--gold);text-transform:uppercase;text-indent:.42em}
+.dateline{margin-top:9px;font-size:11px;color:var(--tx2);letter-spacing:.06em}
+.rules{display:flex;flex-direction:column;gap:3px;margin-top:16px}
+.rules i{display:block;height:1px;background:var(--line)}
+.rules i:last-child{opacity:.45}
+
+/* ---- stats ---- */
+.stats{display:flex;justify-content:center;margin:26px 0 8px}
+.stat{padding:0 34px;text-align:center;border-left:1px solid var(--line)}
+.stat:first-child{border-left:none}
+.stat b{display:block;font:650 31px/1.1 Georgia,serif;color:var(--tx);font-variant-numeric:tabular-nums}
+.stat span{display:block;margin-top:5px;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--tx2)}
+
+/* ---- tabs ---- */
+.tabs{display:flex;justify-content:center;gap:34px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:13px 0;margin-top:22px}
+.tab{background:none;border:none;color:var(--tx2);font-size:11px;letter-spacing:.18em;text-transform:uppercase;cursor:pointer;padding:4px 2px;border-bottom:1px solid transparent}
+.tab:hover{color:var(--tx)}
+.tab.on{color:var(--gold);border-bottom-color:var(--gold)}
+
+main{padding-top:26px}
+.bar{display:flex;gap:10px;align-items:center;margin-bottom:16px;flex-wrap:wrap}
+input,select{background:transparent;border:none;border-bottom:1px solid var(--line);color:var(--tx);padding:7px 2px;font-size:13px;border-radius:0}
 input[type=search]{flex:1;min-width:180px}
-input:focus,select:focus{outline:1px solid var(--acc)}
-.count{font-size:12px;color:var(--dim);white-space:nowrap}
-.twrap{overflow-x:auto;border-radius:8px;border:1px solid var(--bd)}
-table{width:100%;border-collapse:collapse;font-size:13px;background:var(--bg2)}
-th{background:#1c2128;text-align:left;padding:9px 10px;color:var(--dim);cursor:pointer;user-select:none;white-space:nowrap}
-th:hover{color:var(--acc)}
-td{padding:8px 10px;border-top:1px solid #21262d}
-tr:hover td{background:#1a2029}
-tr.det>td{background:#11161d;cursor:default}
+input:focus,select:focus{outline:none;border-bottom-color:var(--gold)}
+select option{background:var(--s1);color:var(--tx)}
+.count{font-size:12px;color:var(--tx2);white-space:nowrap;font-variant-numeric:tabular-nums}
+.twrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--tx2);font-weight:500;text-align:left;padding:8px 12px;cursor:pointer;user-select:none;white-space:nowrap;border-bottom:1px solid var(--line)}
+th:hover{color:var(--gold)}
+td{padding:11px 12px;border-bottom:1px solid rgba(233,230,223,.05)}
+tbody tr:hover td{background:var(--s1)}
 .num{text-align:right;font-variant-numeric:tabular-nums}
-.pill{display:inline-block;border-radius:10px;padding:0 8px;font-size:11px;line-height:18px;white-space:nowrap}
-.pill.in{background:#12351f;color:var(--grn)}.pill.out{background:#3a2210;color:var(--org)}
-.pill.mix{background:#12283f;color:var(--acc)}.pill.other{background:#2d333b;color:var(--dim)}
-.chip{display:inline-block;background:#12283f;color:var(--acc);border-radius:10px;padding:0 8px;font-size:11px;line-height:18px;cursor:pointer;white-space:nowrap}
-.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:12px}
-.card{background:var(--bg2);border:1px solid var(--bd);border-radius:10px;padding:14px}
-.card h3{font-size:15px;margin-bottom:6px;display:flex;justify-content:space-between;gap:6px}
-.kv{font-size:12px;color:var(--dim);margin:3px 0;word-break:break-all}
-a{color:var(--acc);text-decoration:none}
-.copy{background:var(--bd);color:var(--fg);border:none;border-radius:4px;padding:2px 8px;font-size:11px;cursor:pointer;margin-left:6px}
-.grp{margin-bottom:10px}
-.grp>.head{background:var(--bg2);border:1px solid var(--bd);border-radius:8px;padding:10px 14px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:8px}
-.grp>.head b{font-size:14px}
-.grp>.head span{color:var(--dim);font-size:12px}
-.grp>.body{display:none;border:1px solid var(--bd);border-top:none;border-radius:0 0 8px 8px;padding:4px 14px}
+.type{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--tx2)}
+.chip{background:none;border:1px solid var(--line);color:var(--gold);border-radius:20px;padding:2px 10px;font-size:11px;cursor:pointer;white-space:nowrap}
+.chip:hover{border-color:var(--gold)}
+.empty{color:var(--tx2);text-align:center;padding:46px}
+.pager{display:flex;gap:10px;justify-content:flex-end;margin-top:14px;font-size:12px;color:var(--tx2);font-variant-numeric:tabular-nums}
+.pager button{background:none;border:1px solid var(--line);color:var(--tx);border-radius:3px;padding:3px 14px;cursor:pointer}
+.pager button:hover:not(:disabled){border-color:var(--gold)}
+.pager button:disabled{opacity:.3;cursor:default}
+
+/* ---- compare expandable detail ---- */
+tr.det>td{background:var(--s1);cursor:default}
+.qrow{padding:4px 0;font-size:12.5px;color:var(--tx2);border-bottom:1px dashed rgba(233,230,223,.05)}
+.qrow:last-child{border-bottom:none}
+.qrow b{color:var(--tx)}
+
+/* ---- plans accordion ---- */
+.grp{border-top:1px solid var(--line)}
+.grp>.head{display:flex;justify-content:space-between;align-items:baseline;gap:10px;padding:14px 4px;cursor:pointer}
+.grp>.head b{font:650 15px Georgia,serif;letter-spacing:.02em}
+.grp>.head:hover b{color:var(--gold)}
+.grp>.head span{font-size:11px;color:var(--tx2);letter-spacing:.1em;text-transform:uppercase}
+.grp>.body{display:none;padding:2px 4px 16px}
 .grp.open>.body{display:block}
-.plan-row{display:grid;grid-template-columns:minmax(150px,180px) minmax(80px,90px) 1fr;gap:10px;padding:8px 0;border-top:1px solid #21262d;font-size:13px;align-items:baseline}
+.plan-row{display:grid;grid-template-columns:minmax(150px,190px) minmax(80px,110px) 1fr;gap:14px;padding:9px 0;border-top:1px dashed rgba(233,230,223,.06);font-size:13px;align-items:baseline}
 .plan-row:first-child{border-top:none}
-.price{color:var(--grn);font-weight:600;text-align:right;white-space:nowrap}
-.quota{color:var(--dim);font-size:12px;word-break:break-word}
-.models{grid-column:1/4;font-size:11px;color:var(--acc);word-break:break-word}
-.empty{color:var(--dim);text-align:center;padding:40px}
-.pager{display:flex;gap:8px;align-items:center;justify-content:flex-end;margin-top:10px;font-size:13px;color:var(--dim)}
-.pager button{background:var(--bg2);border:1px solid var(--bd);border-radius:6px;color:var(--fg);padding:4px 12px;cursor:pointer}
-.pager button:disabled{opacity:.35;cursor:default}
-footer{text-align:center;color:var(--dim);font-size:12px;padding:28px 12px}
-@media(max-width:720px){.plan-row{grid-template-columns:1fr}.price{text-align:left}}
+.plan-name{font-family:Georgia,serif;font-size:14.5px}
+.price{color:var(--gold);font-family:Georgia,serif;font-size:16px;text-align:right;white-space:nowrap}
+.price small{color:var(--tx2);font-family:inherit;font-size:11px}
+.quota{color:var(--tx2);font-size:12.5px;word-break:break-word}
+.models{grid-column:1/4;font-size:11.5px;color:var(--tx2);word-break:break-word;line-height:1.7}
+.models em{color:var(--gold);font-style:normal;letter-spacing:.08em;text-transform:uppercase;font-size:10px;margin-right:8px}
+
+/* ---- api cards ---- */
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
+.card{background:var(--bg);padding:16px 18px}
+.card h3{font:650 14.5px Georgia,serif;display:flex;justify-content:space-between;gap:6px;margin-bottom:8px}
+.kv{font-size:12px;color:var(--tx2);margin:5px 0;word-break:break-all;line-height:1.6}
+.kv code{color:var(--tx);font-size:11.5px}
+.copy{background:none;border:1px solid var(--line);color:var(--gold);border-radius:3px;padding:1px 8px;font-size:10px;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;margin-left:8px}
+.copy:hover{border-color:var(--gold)}
+
+footer{border-top:1px solid var(--line);margin-top:44px;padding:22px;text-align:center;font-size:11px;color:var(--tx2);letter-spacing:.04em}
+@media(max-width:720px){.stats{flex-wrap:wrap;gap:14px 0}.stat{padding:0 18px}.plan-row{grid-template-columns:1fr}.price{text-align:left}}
 </style>
 </head>
 <body>
-<header>
-  <div class="hrow">
-    <h1>🗄️ <span data-i18n="title"></span> <span class="sub" id="meta"></span></h1>
-    <button id="lang"></button>
+<div class="wrap">
+  <div class="mast">
+    <div class="wordmark">LLM&ensp;Price&ensp;Atlas</div>
+    <div class="hrow" style="display:flex;justify-content:center;margin-top:10px">
+      <button id="lang"></button>
+    </div>
+    <div class="dateline" id="meta"></div>
+    <div class="rules"><i></i><i></i></div>
   </div>
-  <div class="badges" id="badges"></div>
-  <div class="tabs" id="tabs">
+
+  <div class="stats" id="badges"></div>
+
+  <nav class="tabs" id="tabs">
     <button class="tab" data-t="compare"></button>
     <button class="tab" data-t="prices"></button>
     <button class="tab" data-t="plans"></button>
     <button class="tab" data-t="api"></button>
-  </div>
-</header>
-<main>
+  </nav>
+
+<main style="max-width:none;padding-left:0;padding-right:0">
 <section id="v-compare">
   <div class="bar">
     <input type="search" id="q-c"><select id="f-cp"><option value=""></option></select>
     <span class="count" id="cnt-c"></span>
   </div>
   <div class="twrap"><table><thead><tr>
-    <th data-s="model"></th><th data-s="ch"></th>
+    <th data-s="model"></th><th class="num" data-s="ch"></th>
     <th class="num" data-s="in$"></th><th class="num" data-s="out$"></th>
     <th class="num" data-s="total"></th><th></th>
   </tr></thead><tbody id="tb-c"></tbody></table></div>
@@ -120,7 +156,8 @@ footer{text-align:center;color:var(--dim);font-size:12px;padding:28px 12px}
   <div class="cards" id="api-cards"></div>
 </section>
 </main>
-<footer><span data-i18n="footer"></span> · <a href="https://github.com/moyu-good/llm-price-atlas">GitHub</a></footer>
+</div>
+<footer><span data-i18n="footer"></span>&ensp;·&ensp;<a href="https://github.com/moyu-good/llm-price-atlas">GitHub</a></footer>
 <script>
 const DATA = __DATA__;
 const $ = s => document.querySelector(s);
@@ -128,145 +165,139 @@ const $$ = s => [...document.querySelectorAll(s)];
 const esc = s => (s??'').toString().replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const fmt = n => n==null ? '—' : (+n).toFixed(+(+n).toFixed(4).split('.')[1]===''?0:Math.min(4,(+n).toFixed(4).split('.')[1].length));
 
-/* ================= i18n ================= */
 const T = {
- en:{title:"LLM Price Atlas",updated:"data updated",fx:"CNY = USD × 7.1 fixed FX",
+ en:{title:"Price Atlas",updated:"Data updated",fx:"CNY = USD × 7.1 fixed FX",
    tabs:{compare:"Compare",prices:"All prices",plans:"Plans",api:"API access"},
    qCompare:"Search model…",qPrices:"Search model or provider…",qPlans:"Search plan / quota / included models…",qApi:"Search provider…",
    allPlat:"All providers",allType:"All types",
-   colModel:"Model",colProv:"Provider",colType:"Type",colCh:"Sources",colPeak:"Peak / Off-peak ¥",
-   inLbl:"Best input",outLbl:"Best output",totalLbl:"In+Out",
-   rows:"rows",tiers:"tiers",providers:"providers",page:"Page",noResult:"No matches",
-   copy:"copy",copied:"✓ copied",noApi:"No public API (subscription product)",site:"website",
-   flatNote:"blended",expand:"quotes",
-   footer:"Dual-timestamp provenance — collected_at + effective_at on every row · every plan links its official source"},
- zh:{title:"AI 模型价格图谱",updated:"数据更新于",fx:"人民币按 fx=7.1 折算",
+   colModel:"Model",colProv:"Provider",colPeak:"Peak / Off-peak ¥",
+   srcs:"sources",rows:"rows",tiers:"tiers",providers:"providers",page:"Page",
+   incl:"Included",copy:"copy",copied:"done",noApi:"No public API — subscription product",
+   site:"website",flatNote:"blended",expand:"quotes",noResult:"No matches",
+   footer:"Dual-timestamp provenance · every plan links its official source · CNY at fixed FX"},
+ zh:{title:"AI 模型价格图谱",updated:"数据更新于",fx:"人民币按 fx = 7.1 折算",
    tabs:{compare:"跨平台比价",prices:"价格明细",plans:"订阅套餐",api:"API 接入"},
    qCompare:"搜索模型…",qPrices:"搜索模型或平台…",qPlans:"搜索套餐 / 额度 / 包含模型…",qApi:"搜索平台…",
    allPlat:"全部平台",allType:"全部类型",
-   colModel:"模型",colProv:"平台",colType:"类型",colCh:"报价渠道",colPeak:"峰谷价(¥)",
-   inLbl:"最低输入",outLbl:"最低输出",totalLbl:"输入+输出",
-   rows:"条",tiers:"档",providers:"家",page:"页",noResult:"无匹配结果",
-   copy:"复制",copied:"✓ 已复制",noApi:"无公开API（订阅产品）",site:"官网",
-   flatNote:"综合价",expand:"条报价",
-   footer:"双时间戳溯源——每行价格带采集与生效时间 · 每个套餐可溯源官方出处"},
+   colModel:"模型",colProv:"平台",colPeak:"峰谷价（¥）",
+   srcs:"个报价渠道",rows:"条",tiers:"档",providers:"家",page:"页",
+   incl:"包含模型",copy:"复制",copied:"已复制",noApi:"无公开API——订阅产品",
+   site:"官网",flatNote:"综合价",expand:"条报价",noResult:"无匹配结果",
+   footer:"双时间戳溯源 · 每个套餐可查官方出处 · 人民币按固定汇率折算"},
 };
-let LANG = localStorage.getItem('la-lang') || 'en';
+let LANG = localStorage.getItem('pa-lang') || 'en';
 const t = k => T[LANG][k] ?? k;
-const TYPE_EN = {'输入':'Input','输出':'Output','综合价·$M':'Blended','输入·缓存命中':'Cache-hit in',
-                 '输入·缓存未命中':'Cache-miss in'};
-const tt = s => LANG==='en' ? (TYPE_EN[s] || (s||'').replace('输入','Input').replace('输出','Output')) : (s||'');
+const TYPE_EN = {'输入':'Input','输出':'Output','综合价·$M':'Blended','输入·缓存命中':'Cache-hit input',
+                 '输入·缓存未命中':'Cache-miss input'};
+const tt = s => LANG==='en' ? (TYPE_EN[s]||(s||'').replace('输入','Input').replace('输出','Output')) : (s||'');
 
 function applyLang(){
   document.documentElement.lang = LANG==='zh'?'zh-CN':'en';
-  $('#lang').innerHTML = LANG==='en' ? '<b>EN</b>/中文' : 'EN/<b>中文</b>';
+  $('#lang').innerHTML = LANG==='en' ? '<b>EN</b>&nbsp;/&nbsp;中文' : 'EN&nbsp;/&nbsp;<b>中文</b>';
+  $('#lang').style.cssText='background:none;border:none;color:'+(LANG==='en'?'#fff':'var(--tx2)')+';cursor:pointer;font-size:11px;letter-spacing:.1em';
   $$('[data-i18n]').forEach(el=>el.textContent=t(el.dataset.i18n));
   $('#tabs').querySelectorAll('.tab').forEach(b=>b.textContent=t('tabs')[b.dataset.t]);
-  $('#q-c').placeholder=t('qCompare'); $('#q-p').placeholder=t('qPrices');
-  $('#q-pl').placeholder=t('qPlans'); $('#q-a').placeholder=t('qApi');
-  $('#meta').textContent = `${t('updated')} ${DATA.meta.updated} · ${t('fx')}`;
-  $('#badges').innerHTML = ['platforms|providers','models|models','pricing_rows|rows','plan_rows|tiers']
-    .map(x=>{const[k,l]=x.split('|');return `<span class="badge">${esc(t(l)[0].toUpperCase()+t(l).slice(1))} <b>${DATA.meta[k]}</b></span>`}).join('');
+  ['#q-c','#q-p','#q-pl','#q-a'].forEach((s,i)=>$(s).placeholder=[t('qCompare'),t('qPrices'),t('qPlans'),t('qApi')][i]);
+  $('#f-cp option')[0].textContent=t('allPlat'); $('#f-pp option')[0].textContent=t('allPlat');
+  $('#f-pt option')[0].textContent=t('allType');
+  $('#meta').textContent = `${t('updated')} · ${DATA.meta.updated} · ${t('fx')}`;
+  const S=[['platforms',t('providers')],['models','models'.replace('models',LANG==='en'?'models':'模型')],
+           ['pricing_rows',t('rows')],['plan_rows',t('tiers')]];
+  $('#badges').innerHTML =
+    `<div class="stat"><b>${DATA.meta.platforms}</b><span>${LANG==='en'?'Providers':'平台'}</span></div>`+
+    `<div class="stat"><b>${DATA.meta.models}</b><span>${LANG==='en'?'Models':'模型'}</span></div>`+
+    `<div class="stat"><b>${DATA.meta.pricing_rows.toLocaleString()}</b><span>${LANG==='en'?'API prices':'按量价格'}</span></div>`+
+    `<div class="stat"><b>${DATA.meta.plan_rows}</b><span>${LANG==='en'?'Subscriptions':'订阅套餐'}</span></div>`;
   renderAll();
 }
 
-/* ================= routing ================= */
+/* routing */
 const VIEWS=['compare','prices','plans','api'];
 function show(k){
-  VIEWS.forEach(v=>{$('#v-'+v).hidden = v!==k;
+  VIEWS.forEach(v=>{$('#v-'+v).hidden=v!==k;
     $(`#tabs .tab[data-t=${v}]`).classList.toggle('on',v===k)});
   history.replaceState(null,'','#'+k);
 }
-$('#tabs').addEventListener('click',e=>{const b=e.target.closest('.tab'); if(b) show(b.dataset.t)});
-window.addEventListener('hashchange',()=>{const k=location.hash.slice(1); if(VIEWS.includes(k)) show(k)});
+$('#tabs').addEventListener('click',e=>{const b=e.target.closest('.tab');if(b)show(b.dataset.t)});
+window.addEventListener('hashchange',()=>{const k=location.hash.slice(1);if(VIEWS.includes(k))show(k)});
 
-/* ================= helpers ================= */
-function typePill(x){
-  const s=x.item_type||'';
-  if(/输入/.test(s)&&!/输出/.test(s)) return ['in',tt(s)];
-  if(/输出/.test(s)) return ['out',tt(s)];
-  if(/综合价/.test(s)) return ['mix',tt(s)];
-  return ['other',tt(s)];
-}
-function pillHTML(p){const[c,l]=typePill(p);return `<span class="pill ${c}">${esc(l)}</span>`}
+function typeLbl(p){return `<span class="type">${esc(tt(p.item_type))}</span>`}
 
-/* ================= COMPARE ================= */
-const aggModels = (()=> {
+/* ===== compare ===== */
+const aggModels=(()=>{
   const m={};
   DATA.pricing.forEach(p=>{
-    const o=m[p.model_name] ||= {model:p.model_name,ch:new Set,in:null,inP:null,out:null,outP:null,flat:null,quotes:[]};
-    o.quotes.push(p);
-    if(!(o.ch.has(p.platform))) o.ch.add(p.platform);
-    const better=(a,b)=>a==null||b<a;
-    if(/^输入/.test(p.item_type)&&p.price_usd!=null&&better(o.in,p.price_usd)){o.in=p.price_usd;o.inP=p.platform}
-    else if(p.item_type==='输出'&&p.price_usd!=null&&better(o.out,p.price_usd)){o.out=p.price_usd;o.outP=p.platform}
-    else if(/综合价/.test(p.item_type)&&p.price_usd!=null&&better(o.flat,p.price_usd)){o.flat=p.price_usd}
+    const o=m[p.model_name]||={model:p.model_name,ch:new Set(),in:null,inP:null,out:null,outP:null,flat:null,quotes:[]};
+    o.quotes.push(p); o.ch.add(p.platform);
+    const bet=(a,b)=>a==null||b<a;
+    if(/^输入/.test(p.item_type)&&p.price_usd!=null&&bet(o.in,p.price_usd)){o.in=p.price_usd;o.inP=p.platform}
+    else if(p.item_type==='输出'&&p.price_usd!=null&&bet(o.out,p.price_usd)){o.out=p.price_usd;o.outP=p.platform}
+    else if(/综合价/.test(p.item_type)&&p.price_usd!=null&&bet(o.flat,p.price_usd)) o.flat=p.price_usd;
   });
   return Object.values(m).map(o=>({...o,nch:o.ch.size,
-    total:(o.in!=null&&o.out!=null)?o.in+o.out:(o.flat!=null?o.flat:null)}))
+    total:(o.in!=null&&o.out!=null)?o.in+o.out:(o.flat??null)}))
     .filter(o=>o.total!=null).sort((a,b)=>a.total-b.total);
 })();
 let cSort={k:'total',asc:1}, cOpen=new Set();
 function renderC(){
   const q=$('#q-c').value.toLowerCase(), fp=$('#f-cp').value;
   let list=aggModels.filter(o=>(!fp||o.ch.has(fp))&&(!q||o.model.toLowerCase().includes(q)));
-  const {k,asc}=cSort;
+  const{k,asc}=cSort;
   list.sort((a,b)=>((a[k]??Infinity)>(b[k]??Infinity)?1:-1)*asc);
   $('#cnt-c').textContent=list.length+' '+t('rows');
   $('#no-c').hidden=list.length>0;
-  const head={'model':t('colModel'),'ch':t('colCh'),'in$':t('inLbl'),'out$':t('outLbl'),'total':t('totalLbl')};
-  $$('#v-compare th[data-s]').forEach(th=>{
-    th.textContent=head[th.dataset.s]+(cSort.k===th.dataset.s?(cSort.asc?' ▲':' ▼'):'')});
+  const head={model:t('colModel'),ch:t('srcs'),'in$':t('inLbl')||'',out$:t('outLbl')||'',total:''};
+  const lbl={'model':t('colModel'),'ch':LANG==='en'?'Sources':'渠道','in$':LANG==='en'?'Best input':'最低输入',
+             'out$':LANG==='en'?'Best output':'最低输出','total':LANG==='en'?'In + Out':'输入+输出'};
+  $$('#v-compare th[data-s]').forEach(th=>th.textContent=lbl[th.dataset.s]+(cSort.k===th.dataset.s?(cSort.asc?' ↑':' ↓'):''));
   $('#tb-c').innerHTML=list.map(o=>{
-    const open=cOpen.has(o.model);
-    let h=`<tr style="cursor:pointer" onclick="toggleDet(this,'${esc(o.model).replace(/'/g,"\\'")}')">
-      <td><b>${esc(o.model)}</b>${open?'':'<span style="color:var(--dim)"> · '+o.nch+' '+t('providers')}</span></td>
+    const open=cOpen.has(o.model), key=esc(o.model).replace(/'/g,"\\'");
+    let h=`<tr style="cursor:pointer" onclick="toggleDet(this,'${key}')">
+      <td><b>${esc(o.model)}</b></td>
       <td class="num">${o.nch}</td>
-      <td class="num">${o.in!=null?fmt(o.in)+' <span style="color:var(--dim);font-size:11px">@'+esc(o.inP)+'</span>':(o.flat!=null?fmt(o.flat)+'<span style="color:var(--dim)"> ('+t('flatNote')+')</span>':'—')}</td>
-      <td class="num">${o.out!=null?fmt(o.out)+' <span style="color:var(--dim);font-size:11px">@'+esc(o.outP)+'</span>':'—'}</td>
-      <td class="num"><b>${fmt(o.total)}</b></td>
+      <td class="num">${o.in!=null?fmt(o.in)+'<span style="color:var(--tx2);font-size:11px"> @'+esc(o.inP)+'</span>':(o.flat!=null?fmt(o.flat)+'<span style="color:var(--tx2);font-size:11px"> ('+t('flatNote')+')</span>':'—')}</td>
+      <td class="num">${o.out!=null?fmt(o.out)+'<span style="color:var(--tx2);font-size:11px"> @'+esc(o.outP)+'</span>':'—'}</td>
+      <td class="num" style="color:var(--gold);font-family:Georgia,serif;font-size:14px">${fmt(o.total)}</td>
       <td class="num"><span class="chip">${o.nch} ${t('expand')}</span></td></tr>`;
     if(open){
-      h+=`<tr class="det"><td colspan="6" style="padding:6px 24px">`+
-        o.quotes.map(p=>`<div style="padding:2px 0">${pillHTML(p)} <b>${esc(p.platform)}</b> — ${esc(p.model_name)} : `+
-          `<span style="color:var(--grn)">${p.price_usd!=null?'$'+fmt(p.price_usd):''}</span> ${p.source_url?`<a href="${esc(p.source_url)}" target="_blank">${LANG==='en'?'source':'出处'}</a>`:''}</div>`).join('')+
+      h+=`<tr class="det"><td colspan="6" style="padding:8px 24px 14px">`+
+        o.quotes.map(p=>`<div class="qrow"><b>${esc(p.platform)}</b> · ${esc(p.item_type)} — `+
+          `${p.price_usd!=null?'$'+fmt(p.price_usd)+' /Mtok':''} ${p.source_url?`· <a href="${esc(p.source_url)}" target="_blank" rel="noopener">${LANG==='en'?'source':'出处'}</a>`:''}</div>`).join('')+
         '</td></tr>';
     }
     return h}).join('');
 }
-window.toggleDet=(tr,model)=>{
-  cOpen.has(model)?cOpen.delete(model):cOpen.add(model); renderC();
-};
+window.toggleDet=(tr,model)=>{cOpen.has(model)?cOpen.delete(model):cOpen.add(model);renderC()};
 
-/* ================= PRICES ================= */
-let pSort={k:'price_usd',asc:1}, pPage=1, PP=100;
+/* ===== prices ===== */
+let pSort={k:'price_usd',asc:1}, pPage=1; const PP=100;
 function renderP(){
   const q=$('#q-p').value.toLowerCase(), fp=$('#f-pp').value, ft=$('#f-pt').value;
   const all=DATA.pricing.filter(p=>(!fp||p.platform===fp)&&(!ft||p.item_type===ft)&&
     (!q||(p.model_name+' '+p.platform).toLowerCase().includes(q)));
-  const {k,asc}=pSort;
+  const{k,asc}=pSort;
   all.sort((a,b)=>((a[k]??-1)>(b[k]??-1)?1:-1)*asc);
   const pages=Math.max(1,Math.ceil(all.length/PP)); pPage=Math.min(pPage,pages);
   const slice=all.slice((pPage-1)*PP,pPage*PP);
   $('#cnt-p').textContent=all.length+' '+t('rows');
   $('#no-p').hidden=all.length>0;
-  const head={'platform':t('colProv'),'model_name':t('colModel'),'item_type':t('colType'),'price_usd':'$ /Mtok','price_cny':'¥ /Mtok'};
+  const lbl={platform:t('colProv'),model_name:t('colModel'),item_type:LANG==='en'?'Type':'类型'};
   $$('#v-prices th[data-s]').forEach(th=>{
-    th.textContent=(head[th.dataset.s]||'')+(pSort.k===th.dataset.s?(pSort.asc?' ▲':' ▼'):'')});
+    th.textContent=(lbl[th.dataset.s]||th.textContent.replace(/[↑↓]/g,''))+(pSort.k===th.dataset.s?(pSort.asc?' ↑':' ↓'):'')});
   $('#tb-p').innerHTML=slice.map(p=>`<tr>
     <td>${esc(p.platform)}</td><td><b>${esc(p.model_name)}</b></td>
-    <td>${pillHTML(p)}</td>
+    <td>${typeLbl(p)}</td>
     <td class="num">${fmt(p.price_usd)}</td><td class="num">${fmt(p.price_cny)}</td>
-    <td class="num">${p.peak_price_cny?`${fmt(p.peak_price_cny)} / ${fmt(p.offpeak_price_cny)}`:'—'}</td></tr>`).join('');
+    <td class="num" style="color:var(--tx2)">${p.peak_price_cny?`${fmt(p.peak_price_cny)} / ${fmt(p.offpeak_price_cny)}`:'—'}</td></tr>`).join('');
   $('#pager-p').innerHTML=pages<=1?'':
     `<button ${pPage<=1?'disabled':''} onclick="goP(${pPage-1})">‹</button>
-     ${t('page')} ${pPage}/${pages}
+     ${t('page')} ${pPage} / ${pages}
      <button ${pPage>=pages?'disabled':''} onclick="goP(${pPage+1})">›</button>`;
 }
 window.goP=n=>{pPage=n;renderP()};
 ['#q-p','#f-pp','#f-pt'].forEach(s=>$(s).addEventListener('input',()=>{pPage=1;renderP()}));
 
-/* ================= PLANS ================= */
+/* ===== plans ===== */
 const byPlat={};
 DATA.plans.forEach(p=>{(byPlat[p.platform]=byPlat[p.platform]||[]).push(p)});
 function renderPL(){
@@ -278,48 +309,46 @@ function renderPL(){
     html+=`<div class="grp${q?' open':''}"><div class="head" onclick="this.parentElement.classList.toggle('open')">
       <b>${esc(pl)}</b><span>${list.length} ${t('tiers')}</span></div><div class="body">`+
       list.map(p=>`<div class="plan-row">
-        <div><b>${esc(p.plan_name)}</b></div>
-        <div class="price">${p.price_cny!=null?(+p.price_cny?('¥'+(+p.price_cny).toFixed(1).replace(/\.0$/,'')):'待核'):''}<span style="color:var(--dim);font-weight:400">/${esc(p.period||'mo')}</span></div>
+        <div class="plan-name">${esc(p.plan_name)}</div>
+        <div class="price">${p.price_cny!=null?(+p.price_cny?('¥'+(+p.price_cny).toFixed(1).replace(/\.0$/,'')):'—'):''}<small>/${esc(p.period||'mo')}</small></div>
         <div class="quota">${esc(p.quota_desc||'')}</div>
-        ${p.models_included?`<div class="models">🧠 ${esc(p.models_included)}</div>`:''}</div>`).join('')+'</div></div>';
+        ${p.models_included?`<div class="models"><em>${t('incl')}</em>${esc(p.models_included)}</div>`:''}</div>`).join('')+'</div></div>';
   });
   $('#plan-groups').innerHTML=html||`<div class="empty">${t('noResult')}</div>`;
   $('#cnt-pl').textContent=n+' '+t('tiers');
 }
 $('#q-pl').addEventListener('input',renderPL);
 
-/* ================= API ================= */
+/* ===== api ===== */
 const apis=DATA.platforms.filter(p=>p.api_docs_url||p.openai_compatible);
 function renderA(){
   const q=$('#q-a').value.toLowerCase();
   const list=apis.filter(p=>!q||JSON.stringify(p).toLowerCase().includes(q));
   $('#cnt-a').textContent=list.length+' '+t('providers');
   $('#api-cards').innerHTML=list.map(p=>`<div class="card">
-    <h3>${esc(p.name)}<span style="font-size:11px;color:var(--dim)">${esc(p.region||'')}</span></h3>
-    ${p.api_base_url?`<div class="kv">🔗 <code>${esc(p.api_base_url)}</code><button class="copy" onclick="cp(this)">${t('copy')}</button></div>`:''}
-    ${p.api_docs_url?`<div class="kv">📚 <a href="${esc(p.api_docs_url)}" target="_blank" rel="noopener">${esc(p.api_docs_url)}</a></div>`:''}
-    <div class="kv">🔌 ${esc(p.openai_compatible||t('noApi'))}</div>
-    ${p.url?`<div class="kv">🏠 <a href="${esc(p.url)}" target="_blank" rel="noopener">${t('site')}</a></div>`:''}</div>`).join('')
+    <h3>${esc(p.name)}<span style="font-size:10px;color:var(--tx2);letter-spacing:.14em;text-transform:uppercase;align-self:center">${esc(p.region||'')}</span></h3>
+    ${p.api_base_url?`<div class="kv">ENDPOINT · <code>${esc(p.api_base_url)}</code><button class="copy" onclick="cp(this)">${t('copy')}</button></div>`:''}
+    ${p.api_docs_url?`<div class="kv">DOCS · <a href="${esc(p.api_docs_url)}" target="_blank" rel="noopener">${esc(p.api_docs_url)}</a></div>`:''}
+    <div class="kv">${esc(p.openai_compatible||t('noApi'))}</div>
+    ${p.url?`<div class="kv"><a href="${esc(p.url)}" target="_blank" rel="noopener">${t('site')} ↗</a></div>`:''}</div>`).join('')
     ||`<div class="empty">${t('noResult')}</div>`;
 }
 $('#q-a').addEventListener('input',renderA);
-window.cp=b=>{navigator.clipboard.writeText(b.previousElementSibling.textContent.trim());b.textContent=t('copied')};
+window.cp=b=>{navigator.clipboard.writeText(b.previousElementSibling.querySelector('code').textContent);b.textContent=t('copied')};
 
-/* ================= boot ================= */
+/* boot */
 function renderAll(){renderC();renderP();renderPL();renderA()}
-// platform selects
 [...new Set(DATA.pricing.map(p=>p.platform))].sort().forEach(pl=>{
   [['#f-cp'],['#f-pp']].forEach(([s])=>{const o=document.createElement('option');o.value=pl;o.textContent=pl;$(s).appendChild(o)})});
 [...new Set(DATA.pricing.map(p=>p.item_type))].sort().forEach(tp=>{
   const o=document.createElement('option');o.value=tp;o.textContent=tp;$('#f-pt').appendChild(o)});
-$('#lang').onclick=()=>{LANG=LANG==='en'?'zh':'en';localStorage.setItem('la-lang',LANG);applyLang()};
+$('#lang').onclick=()=>{LANG=LANG==='en'?'zh':'en';localStorage.setItem('pa-lang',LANG);applyLang()};
 $('#q-c').addEventListener('input',renderC);
 $('#f-cp').addEventListener('input',renderC);
-$$('.th-sort').forEach(()=>{}); 
 $$('#v-compare th[data-s]').forEach(th=>th.onclick=()=>{
-  cSort = cSort.k===th.dataset.s ? {k:th.dataset.s,asc:-cSort.asc} : {k:th.dataset.s,asc:1}; renderC()});
+  cSort=cSort.k===th.dataset.s?{k:th.dataset.s,asc:-cSort.asc}:{k:th.dataset.s,asc:1};renderC()});
 $$('#v-prices th[data-s]').forEach(th=>th.onclick=()=>{
-  pSort = pSort.k===th.dataset.s ? {k:th.dataset.s,asc:-pSort.asc} : {k:th.dataset.s,asc:1}; pPage=1; renderP()});
+  pSort=pSort.k===th.dataset.s?{k:th.dataset.s,asc:-pSort.asc}:{k:th.dataset.s,asc:1};pPage=1;renderP()});
 applyLang();
 show(VIEWS.includes(location.hash.slice(1))?location.hash.slice(1):'compare');
 </script>
