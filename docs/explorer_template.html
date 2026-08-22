@@ -102,10 +102,17 @@ $('#badges').innerHTML = ['platforms|平台','models|模型','pricing_rows|价�
   .map(x=>{const [k,l]=x.split('|');return `<span class="badge">${l} <b>${DATA.meta[k]}</b></span>`}).join('');
 
 // ---- tabs ----
-document.querySelectorAll('.tab').forEach(t=>t.onclick=()=>{
-  document.querySelectorAll('.tab').forEach(x=>x.classList.remove('on'));t.classList.add('on');
-  ['pricing','plans','api'].forEach(k=>$('#v-'+k).style.display = t.dataset.t===k?'':'none');
+function showTab(k){
+  document.querySelectorAll('.tab').forEach(x=>x.classList.toggle('on',x.dataset.t===k));
+  ['pricing','plans','api'].forEach(t=>$('#v-'+t).style.display = t===k?'':'none');
+  if(location.hash !== '#'+k) history.replaceState(null,'','#'+k);
+}
+document.querySelectorAll('.tab').forEach(t=>t.onclick=()=>showTab(t.dataset.t));
+window.addEventListener('hashchange',()=>{
+  const k=(location.hash||'#pricing').slice(1);
+  if(['pricing','plans','api'].includes(k)) showTab(k);
 });
+showTab((location.hash||'#pricing').slice(1));
 
 // ---- pricing tab ----
 const types = [...new Set(DATA.pricing.map(p=>p.item_type))];
